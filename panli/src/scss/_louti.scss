@@ -1,0 +1,48 @@
+ #loutinav {
+        width: 41px;
+        position: fixed;
+        top: 100px;
+        right: 50px;
+        border: 1px solid #ddd;
+        //display: none;
+        z-index:99;
+    }
+
+    #loutinav ul li {
+        width: 41px;
+        height: 41px;
+        border-bottom: 1px solid #DDDDDD;
+        font-size: 12px;
+        text-align: center;
+        vertical-align: middle;
+        position: relative;
+        cursor: pointer;
+        padding: 10px;
+        background: #f8f8f8;
+       
+    }
+
+    ul li span {
+        width: 41px;
+        height: 41px;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+    }
+    #loutinav .first span{
+        background:url(../images/online-kefu.png) no-repeat;
+    }
+    #loutinav .second span{
+        background:url(../images/online-phone.png) no-repeat;
+    }
+    #loutinav .third span{
+        background:url(../images/online-black.png) no-repeat;
+    }
+    #loutinav .last {
+       // background: #5e4a4a;
+        padding:0 10px;
+        height: 29px;
+    }
+    #loutinav a{
+        display: none;
+    }

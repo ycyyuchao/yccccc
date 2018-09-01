@@ -1,0 +1,31 @@
+$center_wh:1220px;
+$center:0 auto;
+
+.content{
+	.center{
+		width:$center_wh;
+		margin:$center;
+	}
+	.tuijian{
+		div{
+			float:left;
+			a{
+			    display: block;
+			    overflow: hidden;
+			    margin: 10px 10px 0 0;
+			}
+		}
+	}
+	.main{
+		
+		div{
+			float:left;
+			width:242px;
+			a{
+			    display: block;
+			    overflow: hidden;
+			    margin: 10px 10px 0 0
+			}
+		}
+	}
+}

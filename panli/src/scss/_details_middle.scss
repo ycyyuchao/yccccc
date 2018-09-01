@@ -1,0 +1,117 @@
+$centerwh:950px;
+$center:0 auto;
+
+.details{
+	padding: 30px 20px 0;
+	position: relative;
+	background: #f8f8f8;
+	.center{
+		width:$centerwh;
+		margin:$center;
+	}
+	.tip{
+		width:950px;
+		height:85px;
+		border: 1px solid #ffdda1;
+	    margin-bottom: 10px;
+	    padding-bottom: 10px;
+	    background: #ffffcc url(../images/crawler-help-bg.png) no-repeat 865px 32px;
+	    h5{
+	    	line-height: 38px;
+	    	padding-left: 40px;
+	    	background: url(../images/deng01.png) no-repeat 21px 12px;
+	    	height: 33px;
+	    	color: #dd7800;
+	    	font-size: 14px;
+	    	font-weight: bold;
+	    }
+	    p{
+			color: #dd7800;
+		    font-size: 12px;
+		    line-height: 20px;
+	    }
+	}
+	.detailscontent{
+		width: 688px;
+	    border: solid 1px #dfdfdf;
+	    background-color: #fff;
+	    padding-bottom: 25px;
+	    position: relative;
+	    .detailsimg{
+	    	width: 250px;
+	    	display: inline-block;
+	    	float:left;
+	    }
+	    .detailsimg .weizhi{
+	    	height: 39px;
+		    line-height: 39px;
+		    padding-left: 15px;
+		    border-bottom: solid 1px #e7e7e7;
+		    color: #878787;
+		    font-size: 12px;
+		    a{
+		    	color: #71a8cf;
+		    	padding: 0 5px;
+		    }
+	    }
+	    .detailsimg p{
+	    	width: 658px;
+	    	height: 35px;
+	    	background: #ffffe0;
+	    	border: 1px solid #f9dfb2;
+	    	margin: 10px 1px 20px 13px;
+	    	padding-left: 15px;
+		    line-height: 35px;
+		    color: #656565;
+		    font-size: 12px;
+	    }
+	    .detailsimg .smallpic {
+	    	height: 250px;
+	    	width: 250px;
+	    	opacity: 1;
+	    	float:left;
+	    	margin:0 10px 0 20px;
+	    	img{
+	    		width:250px;
+	    		height:250px;
+	    	}
+	    }
+	    .bigscale{
+	    	height: 250px;
+	    	width: 250px;
+	    	opacity: 1;
+	    	overflow: hidden;
+	    	float: left;
+	    	display:none;
+	    }
+	}
+	.detailsinfo{
+		width: 400px;
+		display: inline;
+		margin-left: 5px;
+		position:absolute;
+		top:110px;
+		left:280px;
+		font-size: 12px;
+		dd{
+			width: 400px;
+			margin: 3px 0;
+			span{
+				display: block;
+				float: left;
+				text-align: right;
+				width: 75px;
+				color: #878787;
+				line-height: 25px;
+			}
+			input{
+				color: #f00;
+				width: 300px;
+				background: #fff;
+				border: #FF9900 solid 1px;
+				padding: 5px 5px 5px 5px;
+			}
+		}
+	}
+}
+

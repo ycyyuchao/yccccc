@@ -1,0 +1,33 @@
+@mixin opacity_value($opacity:0.6) {
+    opacity: $opacity;
+    filter: alpha(opacity=$opacity*100);
+}
+.banner{
+	ul {
+		li{
+			display: none;
+		}
+	}
+	ol{
+		position: absolute;
+    	bottom: 15px;
+    	width: 900px;
+    	text-align: center;
+		li{
+			background: #fff;
+			display: inline-block;
+			@include opacity_value;
+			width: 12px;
+			height: 12px;
+			margin: 0 3px;
+			border-radius: 50%;
+			cursor: pointer;
+		}
+		.click{
+			opacity: 1;
+		}
+	}	
+	img{
+		display: block;
+	}
+}
