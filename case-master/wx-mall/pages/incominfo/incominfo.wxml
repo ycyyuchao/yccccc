@@ -1,0 +1,105 @@
+<view class='profitDetails'>
+  <view class='scoreCate'>
+    <view class='score'>
+      <view class='scoreName'>我的积分：</view>
+      <view class='num'>{{myPoint}}</view>
+    </view>
+    <view class='rateReduce'>
+      <view class='scoreName'>返佣率：</view>
+      <view class='rate'>12.8%</view>
+    </view>
+  </view>
+  <view class='scoreCate'>
+    <view class='useless'>
+      <view class='scoreName'>不可用积分：</view>
+      <view class='unnum'>666</view>
+    </view>
+    <view class='overtime'>
+      <view class='scoreName'>过期积分：</view>
+      <view class='over'>438</view>
+    </view>
+
+  </view>
+
+  <view class='scoreChange'>
+    <view class='change {{tapHdCurrent=="0"?"on":""}}' id="0" data-id="0" catchtap='tap'>积分收入</view>
+    <view class='change {{tapHdCurrent=="1"?"on":""}} ' id="1" data-id="1" catchtap='tap'>积分支出</view>
+    <view class='change {{tapHdCurrent=="2"?"on":""}} ' id="2" data-id="2" catchtap='tap'>不可以积分</view>
+    <view class='change {{tapHdCurrent=="3"?"on":""}} ' id="3" data-id="3" catchtap='tap'>过期积分</view>
+  </view>
+  <!-- <block wx:for="{{DetailList}}"> -->
+    <!-- <view class='message' wx:if="{{item.length == 0}}">您目前还没有积分输入，快去领取积分吧</view> -->
+    <view class='time'>{{item.IscurrMonth}}本月</view>
+    <view class='from'>
+
+
+      <block wx:if='{{tapBdCurrent === 0}}'>
+
+        <view class='scoreAdd'>
+          <block wx:for="{{item.arr}}" wx:for-item="i">
+            <block wx:if="{{!i.incomorpay}}">
+              <view class='sign'>
+                <view class='left'>
+                  <view class='scoreFrom'>{{i.categoryVo.name}}</view>
+                  <view class='date'>{{i.incomtime}}</view>
+                </view>
+                <view class='right'>+{{i.incominfo_num}}</view>
+              </view>
+            </block>
+          </block>
+        </view>
+
+      </block>
+
+
+
+      <block wx:if='{{tapBdCurrent == 1}}'>
+        <view class='scoreRemove' wx:if='{{tapBdCurrent ==1}}'>
+          <block wx:for="{{item.arr}}" wx:for-item="i">
+            <block wx:if="{{i.incomorpay}}">
+              <view class='sign'>
+                <view class='left'>
+                  <view class='scoreFrom'>{{i.categoryVo.name}}</view>
+                  <view class='date'>{{i.incomtime}}</view>
+                </view>
+                <view class='right'>{{i.incominfo_num}}</view>
+              </view>
+            </block>
+          </block>
+        </view>
+      </block>
+
+
+      <block wx:if="{{tapBdCurrent == 2}}">
+        <view class='unusing'>
+          <view class='unusingItem' wx:for="{{5}}">
+            <view class='unusingTop'>
+              <view class='topLeft'>签到</view>
+              <view class='topRight'>+1</view>
+            </view>
+            <view class='unusingBottom'>
+              <view class='bottomleft'>2018.6.28</view>
+              <view class='bottomRight'>2018.7.25将过期</view>
+            </view>
+          </view>
+        </view>
+      </block>
+
+
+      <block wx:if="{{tapBdCurrent == 3}}">
+        <view class='unusing'>
+          <view class='unusingItem'>
+            <view class='unusingTop'>
+              <view class='topLeft'>签到</view>
+              <view class='topRight'>+1</view>
+            </view>
+            <view class='unusingBottom'>
+              <view class='bottomleft'>2018.6.28</view>
+              <view class='bottomRight'>2018.7.25将过期</view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  <!-- </block> -->
+</view>

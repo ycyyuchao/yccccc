@@ -1,0 +1,44 @@
+<!--pages/ucenter/signin/signin.wxml-->
+<view class='container'>
+  <!-- <view class='header'>
+    <view class='title'>签到</view>
+    
+    
+  </view> -->
+  <view class='details'>
+    <navigator url=''>
+      <view class='details-score'>
+        <view class='details-text'>你的可用积分</view>
+        <image class='details-png' src='../../../static/images/go.png'></image>
+      </view>
+    </navigator>
+    <navigator url='/pages/scoreInstruct/scoreInstruct'>
+      <view class='instruction'>积分指南</view>
+    </navigator>
+    <view class='num'>{{integral}}</view>
+    <view class='vip'>
+      <navigator url=''>
+        <view class='vip-text'>普通会员</view>
+        <image class='vip-png' src='../../../static/images/go.png'></image>
+      </navigator>
+    </view>
+  </view>
+
+  <view class='date'>
+    <view class='date-state on' wx:for="{{boxData}}" wx:key="{{index}}" >
+      <view class='add {{item.classState?"active":""}}'>+5</view>
+      <view class='time' >{{item.title}}</view>
+    </view>
+   
+    <view class='date-state'>
+      <view class='add last'><image class='gift' src='../../../static/images/gift.png'></image></view>
+      <view class='time'>7-12</view>
+    </view>
+  
+  </view>
+  <button  class='button {{btnState?"btnOn":""}}' disabled='{{btnState?"true":""}}' bindtap='signin'>签到得积分</button>
+  <!-- <view class='already'>今天已签到</view> -->
+
+
+
+</view>

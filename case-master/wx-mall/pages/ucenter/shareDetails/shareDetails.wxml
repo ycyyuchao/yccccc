@@ -1,0 +1,41 @@
+<!--pages/ucenter/shareDetails/shareDetails.wxml-->
+<view class='container'>
+  <view class='title'>积分贡献</view>
+  <view class='month'>本月</view>
+  <view class='item'>
+    <view class='left'>
+      <view class='consume'>月子餐消费</view>
+      <view class='date'>2018、07、21</view>
+    </view>
+    <view class='score'>+24</view>  
+  </view>
+
+  <view class='share-relation'>
+      <view class='share-cate'>我的好友</view>
+        <block wx:for='{{3}}'>
+          <navigator url='../shareDetails/shareDetails'>
+            <view class='share-parson'>
+              <image class='share-photo' src='../../../static/images/touxiang.jpeg'></image>
+              <view class='share-nick'>
+                <view class='name'>琴棋书画诗酒茶</view>
+                <view class='vip'>
+                  <image  class='vip-icon' src='{{vipUrl[2]}}'></image>
+                黄金会员</view>
+              </view>
+              <view class='share-profit'>
+                <view class='share-friends'>
+                  <view class='share-title'>好友总数</view>
+                  <view class='share-num'>10</view>
+                </view>
+                <view class='share-total'>
+                  <view class='share-title'>总贡献值</view>
+                  <view class='share-num'>20</view>
+                </view>
+              </view>
+            </view>
+          </navigator>
+        </block>
+      
+    </view>
+
+</view>

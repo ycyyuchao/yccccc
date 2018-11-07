@@ -1,0 +1,198 @@
+<view class='nav'>
+  <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex;flex-wrap:nowrap" class='category' catchtap='scroll'>
+    <view class="kind {{currentId == index?'on':''}}" wx:for="{{details}}" data-id="{{index}}" data-cid="{{item.id}}" catchtap='click'>{{item.name}}</view>
+  </scroll-view>
+  <image class='arrowDown' src='../../static/images/show.png' catchtap='popUp'></image>
+</view>
+<view class='pop-up' hidden='{{!popShow}}' catchtap='packUp'>
+  <view class='zhezhao'>
+    <view class='box'>
+      <view class="cate" catchtap='clickAggin' wx:for="{{details}}" data-cid="{{item.id}}" data-id="{{index}}">{{item.name}}</view>
+
+    </view>
+  </view>
+</view>
+
+
+<view class="container">
+  <swiper class="banner" indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+    <swiper-item wx:for="{{bannerApi}}">
+      <!-- <navigator url="{{item.link}}">
+        <image src="{{item.image_url}}" background-size="cover"></image>
+      </navigator> -->
+      <image src='{{item}}'></image>
+    </swiper-item>
+  </swiper>
+
+  <!-- 母婴商城 -->
+  <block wx:if="{{currentId == 3}}">
+    <!-- <view class="m-menu">
+      <navigator class="item" url="{{item.url}}" wx:for="{{channel}}" wx:key="{{item.id}}">
+        <image src="{{item.icon_url}}" background-size="cover"></image>
+        <text>{{item.name}}</text>
+      </navigator>
+    </view> -->
+
+
+
+    <!-- <view class="a-section a-brand">
+      <view class="h">
+        <navigator url="../brand/brand">
+          <text class="txt">品牌制造商直供</text>
+        </navigator>
+      </view>
+      <view class="b">
+        <view class="item item-1" wx:for="{{brand}}" wx:key="item.id">
+          <navigator url="/pages/brandDetail/brandDetail?id={{item.id}}">
+            <view class="wrap">
+              <image class="img" src="{{item.new_pic_url}}" mode="aspectFill"></image>
+              <view class="mt">
+                <text class="brand">{{item.name}}</text>
+                <text class="price">{{item.floor_price}}</text>
+                <text class="unit">元起</text>
+              </view>
+            </view>
+          </navigator>
+        </view>
+      </view>
+    </view> -->
+
+    <!-- <view class="a-section a-topic" wx:if="topics.length > 0">
+      <view class="h">
+        <view>
+          <navigator url="../topic/topic" open-type="switchTab">
+            <text class="txt">专题精选</text>
+          </navigator>
+        </view>
+      </view>
+      <view class="b">
+        <scroll-view scroll-x="true" class="list">
+          <view class="item" wx:for="{{topics}}" wx:for-index="index" wx:for-item="item" wx:key="{{item.id}}">
+            <navigator url="../topicDetail/topicDetail?id={{item.id}}">
+              <image class="img" src="{{item.scene_pic_url}}" background-size="cover"></image>
+              <view class="np">
+                <text class="name">{{item.title}}</text>
+                <text class="price">￥{{item.price_info}}元起</text>
+              </view>
+              <text class="desc">{{item.subtitle}}</text>
+            </navigator>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+
+    <view class="a-section a-new" wx:if="{{newGoods.length > 0}}">
+      <view class="h">
+        <view>
+          <navigator url="../newGoods/newGoods">
+            <text class="txt">周一周四 · 新品首发</text>
+          </navigator>
+        </view>
+      </view>
+      <view class="b">
+        <view class="item" wx:for="{{newGoods}}" wx:for-index="index" wx:for-item="item" wx:key="{{item.id}}">
+          <navigator url="../goods/goods?id={{item.id}}">
+            <image class="img" src="{{item.list_pic_url}}" background-size="cover"></image>
+            <text class="name">{{item.name}}</text>
+            <text class="price">￥{{item.retail_price}}</text>
+          </navigator>
+        </view>
+      </view>
+    </view>
+
+    <view class="a-section a-popular" wx:if="{{hotGoods.length > 0}}">
+      <view class="h">
+        <view>
+          <navigator url="../hotGoods/hotGoods">
+            <text class="txt">人气推荐</text>
+          </navigator>
+        </view>
+      </view>
+      <view class="b">
+        <view class="item" wx:for="{{hotGoods}}" wx:for-index="index" wx:for-item="item" wx:key="{{item.id}}">
+          <navigator url="/pages/goods/goods?id={{item.id}}">
+            <image class="img" src="{{item.list_pic_url}}" background-size="cover"></image>
+            <view class="right">
+              <view class="text">
+                <text class="name">{{item.name}}</text>
+                <text class="desc">{{item.goods_brief}}</text>
+                <text class="price">￥{{item.retail_price}}</text>
+              </view>
+            </view>
+          </navigator>
+        </view>
+      </view>
+    </view> -->
+
+    <view class="good-grid" wx:for="{{floorGoods}}" wx:key="{{item.id}}">
+      <view class="h">
+        <view>
+          <text>{{item.name}}</text>
+        </view>
+      </view>
+      <view class="b">
+        <block wx:for="{{item.goodsList}}" wx:for-index="iindex" wx:for-item="iitem" wx:key="{{iitem.id}}">
+          <view class="item {{iindex % 2 == 0 ? '' : 'item-b'}}">
+            <navigator url="../goods/goods?id={{iitem.id}}" class="a">
+              <image class="img" src="{{iitem.list_pic_url}}" background-size="cover"></image>
+              <text class="name">{{iitem.name}}</text>
+              <text class="price">￥{{iitem.retail_price}}</text>
+            </navigator>
+          </view>
+        </block>
+        <view class="item item-b item-more">
+          <navigator url="/pages/category/category?id={{item.id}}" class="more-a">
+            <view class="txt">{{'更多'+item.name+'好物'}}</view>
+            <image class="icon" src="../../static/images/icon_go_more.png" background-size="cover"></image>
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </block>
+  <!-- 母婴商城 -->
+
+  <!-- 蜜月套餐 -->
+  <block wx:elif="{{currentId == 1}}">
+    <view class='honeymoon'>
+      <view class='honeymoonItem' wx:for="{{honeymoon}}" data-id="{{index}}">
+        <navigator url='../honeyMoon/honeyMoon?id={{index}}'>
+          <image class='honeymoonImg' src='{{item.url}}'></image>
+        </navigator>
+        <view class='honeymoonName'>{{item.name}}</view>
+      </view>
+    </view>
+  </block>
+  <!-- 蜜月套餐 -->
+
+
+  <!-- 产后修复 -->
+  <block wx:elif="{{currentId === 4 }}">
+    <view class='chanhou'>
+      <view class='chanhouItem' wx:for="{{chanhou}}">
+        <image class='chanhouImg' src='{{item.url}}'></image>
+        <view class='chanhouInstruct'>
+          <view class='chanhouName'>{{item.name}}</view>
+          <view class='chanhouContetn'>{{item.content}}</view>
+        </view>
+      </view>
+
+    </view>
+  </block>
+  <!-- 产后修复 -->
+
+  <!-- 营养餐 -->
+  <block wx:elif="{{currentId == 0 }}">
+    <view class='yingyang'>
+      <view class='yingyangItem' wx:for="{{yingyang}}">
+        <image class='yingyangImg' src='{{item.img}}'></image>
+        <view class='yingyangText'>
+          <view class='yingyangTime'>{{item.time}}</view>
+          <view class='yingyangInstruct'>{{item.title}}</view>
+          <view class='yingyangEffect'>{{item.content}}</view>
+        </view>
+      </view>
+
+    </view>
+  </block>
+  <!-- 营养餐 -->
+</view>

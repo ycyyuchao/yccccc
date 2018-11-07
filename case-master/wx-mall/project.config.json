@@ -1,0 +1,95 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.2.3",
+	"appid": "wx07f9f008307f2091",
+	"projectname": "%E5%81%A5%E8%B4%9D%E9%9B%85",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 9,
+			"list": [
+				{
+					"id": 0,
+					"name": "选择优惠券",
+					"pathName": "pages/shopping/selCoupon/selCoupon",
+					"query": "isBuy=false"
+				},
+				{
+					"id": -1,
+					"name": "订单界面",
+					"pathName": "pages/shopping/checkout/checkout",
+					"query": "isBuy=true"
+				},
+				{
+					"id": -1,
+					"name": "我的优惠券",
+					"pathName": "pages/ucenter/coupon/coupon",
+					"query": "isBuy=true"
+				},
+				{
+					"id": -1,
+					"name": "我的订单",
+					"pathName": "pages/ucenter/order/order",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "积分明细",
+					"pathName": "pages/incominfo/incominfo",
+					"query": ""
+				},
+				{
+					"id": 7,
+					"name": "分享圈",
+					"pathName": "pages/ucenter/share/share",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "预约",
+					"pathName": "pages/appointment/appointment",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "预约详情",
+					"pathName": "pages/ucenter/serviceDetails/serviceDetails",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "领券中心",
+					"pathName": "pages/shopCenter/shopCenter",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "收益明细",
+					"pathName": "pages/incominfo/incominfo"
+				}
+			]
+		}
+	}
+}

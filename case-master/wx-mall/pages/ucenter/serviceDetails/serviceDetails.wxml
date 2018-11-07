@@ -1,0 +1,135 @@
+<!--pages/ucenter/serviceDetails/serviceDetails.wxml-->
+<view class='container'>
+  <view class='goods'>
+      <view class='item'>
+        <image class='goodsImg' src='../../../static/images/babyGoods.jpg'></image>
+        <view class='goodsDetails'>
+          <view class='top'>
+            <view class='goodsName'>蜜月套餐</view>
+            <view class='price'>￥39999</view>
+          </view>
+          <view class='bottom'>
+            <view class='reduse'>商家优惠</view>
+            <view class='num'>-￥1000</view>
+          </view>
+        </view>
+      </view>
+      <view class='sume'>合计
+        <view class='total'>￥38999</view>
+      </view>
+  </view>
+
+  <view class='address'>
+    <view class='icon'>
+      <image class='goodImg' src='../../../static/images/map.png'></image>
+      <view class='distance'>4.7km</view>
+    </view>
+    <view class='location'>长沙市开福区芙蓉北路街道芙蓉中路一段191号好来登酒店15楼诗安月子中心
+    </view>
+    
+    <button class='goto' catchtap='navigatorTo'>到店导航</button>
+    
+  </view>
+
+  <view class='tracking'>
+    <view class='title'>订单状态跟踪</view>
+    <view class='status'>
+      <view class="orderState {{index == 0?'active':''}} {{index == 4?'lastOne':''}}"  
+            wx:for="{{statusOrder}}" key="{{index}}" >
+            <block wx:if="{{index ==0}}">
+              <image class='stateImg' src='../../../static/images/okon.png'></image>
+            </block>
+            <block wx:else="{{index !=0}}">
+              <image class='stateImg' src='../../../static/images/ok.png'></image>
+            </block>
+              {{item}}
+      </view>
+    </view>
+
+  </view>
+
+  <view class='orderList'>
+    <view class='item'>
+      <view class='dot first'></view>
+      <view class='stateDetails'>
+        <view class='appointTime'>预约时间：2018年8月22（周三） 9:00</view>
+        <view class='trackDetail'>
+          <view class="trackTime">2018-6-21 12:00</view>
+          <button class='changeDate'  bindtap='changeDate'>修改</button>
+        </view>
+      </view>
+    </view>
+
+    <view class='item'>
+      <view class='dot second'></view>
+      <view class='stateDetails'>
+        <view class='connection'>
+          <view class='merchant'>联系商家：
+            <view class='connectionPhone'>0731-8888888</view>
+          </view>
+          <button class='Ip' catchtap='call'>拨打</button>
+        </view>
+        <view class='discrible'>【健贝雅月子中心】48小时内会与您联系，请您保持联系方式畅通；您也可以在工作日09：00-17：00主动联系商家                 </view>
+      </view>
+    </view>
+
+
+    <view class='item'>
+      <view class='dot third'></view>
+      <view class='stateDetails'>
+        <view class='appointSuccess'>
+          预约成功：
+          <view class='successTime'>2018年8月23日（周四） 9:00</view>
+        </view>
+        <view class="trackTime">2018-6-21 12:00</view>
+      </view>
+    </view>
+
+
+    <view class='item'>
+      <view class='dot fouth'></view>
+      <view class='stateDetails'>
+        <view class='consume'>付款成功：到店消费</view>
+        <view class="trackTime">2018-6-21 12:00</view>
+      </view>
+    </view>
+
+    <view class='item'>
+      <view class='dot fivth '></view>
+      <view class='stateDetails service'>
+        <view class='evaluation'>服务评价：
+          <image class='star' src='../../../static/images/class.png' wx:for="{{5}}"></image>
+        </view>
+        <form class='form'>
+            <textarea class='message' placeholder='说说您对这次消费的感受吧'></textarea>
+            <button class='submitInfo'>提交</button>
+        </form>
+      </view>
+    
+    </view>
+  
+  </view>
+
+
+
+
+  <view class='dateBox' hidden="{{dateState}}">
+    <calendar weeks-type="cn"   days-color="{{days_style}}"  
+      binddayClick="dayClick" show-more-days="{{true}}"
+      active-type="rounded">
+      
+    </calendar>
+    <view class='time'>
+      <view class='imply'>请选择预定时间</view>
+      <view class='timeBox'>
+        <view class="timing {{current == index+1?'dateOn':''}}" data-id='{{index+1}}' 
+              bindtap='check' wx:for="{{timing}}"  data-items="{{item}}">{{item}}
+        </view>
+      </view>
+    </view>
+
+    <button class='submit' catchtap='submit'>确认</button>
+  </view>
+
+
+</view>

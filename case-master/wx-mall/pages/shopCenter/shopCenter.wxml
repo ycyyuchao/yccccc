@@ -1,0 +1,68 @@
+<!--pages/shopCenter/shopCenter.wxml-->
+<view class='container'>
+ <HeaderNav></HeaderNav>
+
+  <view class='goodsList'>
+    <view class='items'>
+      <view class='item-thumb'>
+        <view class='vip'>
+          <view class='vip-normal'>
+            <image class='vip-img' src="{{vipUrl[0]}}"></image>青铜会员</view>
+        </view>
+        <image class='goodsImg' src='../../static/images/babyGoods.jpg'></image>
+      </view>
+
+      <view class='item-name'>
+        <view class='goodsName'>蜜月餐</view>
+        <view class='item-price'>-800￥</view>
+      </view>
+
+      <view class='item-opera'>
+
+        <block wx:if="{{curId == 0}}">
+          <button class='btn active' data-id="0" catchtap='obtainCoupon' >领取成功</button>
+        </block>
+
+        <block wx:else>
+          <button class='btn ' data-id="0" catchtap='obtainCoupon' >点击领取</button>
+        </block>
+
+
+        <view class='item-expand' catchtap='showHide'>{{changeState}}
+          <image class='showDown' src='{{imgSrc}}'></image>
+        </view>
+      </view>
+    </view>
+    <view class='item-box' hidden='{{showState}}'>
+      <view class='item-list'>
+        <view class='item-thumb'>
+          <view class='vip'>
+            <view class='vip-normal'>
+              <image class='vip-img' src="{{vipUrl[1]}}"></image>普通会员</view>
+          </view>
+          <image class='goodsImg' src='../../static/images/babyGoods.jpg'></image>
+        </view>
+
+        <view class='item-name'>
+          <view class='goodsName'>蜜月餐</view>
+          <view class='item-price'>-500￥</view>
+        </view>
+        <view class='item-opera'>
+
+
+          <block wx:if="{{curId == index+1}}" >
+            <button class='btn active' data-id='{{index+1}}' catchtap='obtainCoupon' >领取成功</button>
+          </block>
+
+          <block wx:else>
+            <button class='btn' data-id='{{index+1}}' catchtap='obtainCoupon' >点击领取</button>
+          </block>
+        </view>
+      </view>
+
+      
+
+      
+    </view>
+  </view>
+</view>

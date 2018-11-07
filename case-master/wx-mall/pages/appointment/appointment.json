@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "开始预约",
+  "usingComponents":{
+    "calendar":"plugin://calendar/calendar"
+  }
+}

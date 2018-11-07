@@ -1,0 +1,115 @@
+{
+  "plugins": {
+    "calendar": {
+      "version": "1.1.3",
+      "provider": "wx92c68dae5a8bb046"
+    }
+  },
+  "pages": [
+    "pages/index/index",
+    "pages/catalog/catalog",
+    "pages/newGoods/newGoods",
+    "pages/hotGoods/hotGoods",
+    "pages/ucenter/address/address",
+    "pages/ucenter/addressAdd/addressAdd",
+    "pages/ucenter/footprint/footprint",
+    "pages/ucenter/order/order",
+    "pages/ucenter/orderDetail/orderDetail",
+    "pages/ucenter/feedback/feedback",
+    "pages/ucenter/coupon/coupon",
+    "pages/ucenter/collect/collect",
+    "pages/auth/login/login",
+    "pages/auth/register/register",
+    "pages/auth/reset/reset",
+    "pages/pay/pay",
+    "pages/payResult/payResult",
+    "pages/ucenter/index/index",
+    "pages/topic/topic",
+    "pages/comment/comment",
+    "pages/commentPost/commentPost",
+    "pages/topicComment/topicComment",
+    "pages/brand/brand",
+    "pages/brandDetail/brandDetail",
+    "pages/search/search",
+    "pages/category/category",
+    "pages/cart/cart",
+    "pages/shopping/checkout/checkout",
+    "pages/shopping/address/address",
+    "pages/shopping/addressAdd/addressAdd",
+    "pages/goods/goods",
+    "pages/topicDetail/topicDetail",
+    "pages/auth/mobile/mobile",
+    "pages/shopping/selCoupon/selCoupon",
+    "pages/incominfo/incominfo",
+    "pages/ucenter/signin/signin",
+    "pages/scoreInstruct/scoreInstruct",
+    "pages/vip/vip",
+    "pages/ucenter/share/share",
+    "pages/ranking/ranking",
+    "pages/shopCenter/shopCenter",
+    "pages/ucenter/shareDetails/shareDetails",
+    "pages/appointment/appointment",
+    "pages/ucenter/serviceDetails/serviceDetails",
+    "pages/shareRule/shareRule",
+    "pages/honeyMoon/honeyMoon",
+    "pages/ucenter/map/map",
+    "pages/ucenter/navigation_walk/navigation",
+    "pages/ucenter/navigation_walk_detail/navigation",
+    "pages/ucenter/navigation_bus/navigation",
+    "pages/ucenter/navigation_car/navigation",
+    "pages/ucenter/navigation_car_detail/navigation",
+    "pages/ucenter/navigation_ride/navigation",
+    "pages/ucenter/navigation_ride_detail/navigation",
+    "pages/ucenter/inputtips/input"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "母婴贝",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "backgroundColor": "#fafafa",
+    "borderStyle": "white",
+    "selectedColor": "#b4282d",
+    "color": "#666",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/images/ic_menu_choice_nor.png",
+        "selectedIconPath": "static/images/ic_menu_choice_pressed.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/topic/topic",
+        "iconPath": "static/images/ic_menu_topic_nor.png",
+        "selectedIconPath": "static/images/ic_menu_topic_pressed.png",
+        "text": "专题"
+      },
+      {
+        "pagePath": "pages/catalog/catalog",
+        "iconPath": "static/images/ic_menu_sort_nor.png",
+        "selectedIconPath": "static/images/ic_menu_sort_pressed.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "iconPath": "static/images/ic_menu_shoping_nor.png",
+        "selectedIconPath": "static/images/ic_menu_shoping_pressed.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/ucenter/index/index",
+        "iconPath": "static/images/ic_menu_me_nor.png",
+        "selectedIconPath": "static/images/ic_menu_me_pressed.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

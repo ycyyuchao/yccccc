@@ -1,0 +1,64 @@
+<view class='container'>
+  <view class='goods'>
+    <view class='item'>
+      <image class='goodsImg' src='../../static/images/babyGoods.jpg'></image>
+      <view class='goodsDetails'>
+        <view class='top'>
+          <view class='goodsName'>蜜月套餐</view>
+          <view class='price'>￥39999</view>
+        </view>
+        <view class='bottom'>
+          <view class='reduse'>商家优惠</view>
+          <view class='num'>-￥1000
+            <image class='go' src='../../static/images/go.png'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='sume'>合计
+      <view class='total'>￥38999</view>
+    </view>
+  </view>
+
+
+  <view class='appointment'>
+    <view class='choseDate' catchtap='gotoCheck'>
+      <view class='promt'>请选择预约时间</view>
+      <image class='goto' src='../../static/images/go.png'></image>
+    </view>
+
+    <form class='contact'  bindsubmit="formSubmit" >
+      <input name="input" class="input" placeholder='请输入手机号码' ></input>
+      <button class='getCode' form-type='submit'>获取验证码</button>
+      
+    </form>
+
+    
+  </view>
+  <form class='verify' bindsubmit='justAppoint'>
+    <input name="input" class='code' placeholder='请输入验证码' ></input>
+    <button class='toAppoint' form-type='submit'>立即预约</button>
+  </form>
+
+  
+ 
+ 
+
+  <view class='dateBox' hidden="{{dateState}}">
+    <calendar weeks-type="cn"   days-color="{{days_style}}"  
+      binddayClick="dayClick" show-more-days="{{true}}"
+      active-type="rounded">
+      
+    </calendar>
+    <view class='time'>
+      <view class='imply'>请选择预定时间</view>
+      <view class='timeBox'>
+        <view class="timing {{current == index+1?'dateOn':''}}" data-id='{{index+1}}' bindtap='check' wx:for="{{timing}}"  data-items="{{item}}">{{item}}</view>
+      </view>
+    </view>
+
+    <button class='submit' catchtap='submit'>确认</button>
+  </view>
+
+
+</view>

@@ -1,0 +1,16 @@
+
+  <view class='nav'>
+      <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex;flex-wrap:nowrap" class='category' catchtap='scroll'>
+        <view class="kind {{currentId == index?'on':''}}" 
+              wx:for="{{kind}}" data-id="{{index}}" catchtap='click'>{{item}}</view>
+      </scroll-view>
+      <image class='arrowDown' src='../../static/images/show.png' catchtap='popUp'></image>
+  </view>
+  <view class='pop-up' hidden='{{!popShow}}' catchtap='packUp'  >
+    <view class='zhezhao' >
+      <view class='box'>
+        <view class="cate" catchtap='clickAggin' wx:for="{{kind}}" data-id="{{index}}">{{item}}</view>
+    
+      </view>
+    </view>
+  </view>

@@ -1,0 +1,173 @@
+<!--pages/honeyMoon/honeyMoon.wxml-->
+<view class='container' >
+  <scroll-view class='header'>
+    <swiper indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+      <block wx:for="{{url}}">
+        <swiper-item>
+          <image class='banner' src='{{item}}'></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </scroll-view>
+  <view class='details'>
+    <block>
+      <view class="c">
+        <text class="name">温馨月子餐</text>
+        <text class="desc">温馨大床房型</text>
+        <text class="price">￥39800</text>
+      </view>
+    </block> 
+
+  </view>
+
+   <!-- S 领券 -->
+    <view class='coupon'>
+
+      <view class='coupon-header'>
+        <view class='coupon-header-a'>优惠</view>
+        <view class='coupon-header-b'>
+          <image class='coupon-logo' src='../../static/images/couponDown.png'></image>
+          <view class='coupon-header-get'>领券至少立减
+            <text class='coupon-header-getNum'>￥100</text>
+          </view>
+        </view>
+        <view class='coupon-header-goto' catchtap='goto'>领券 
+          <image class='goto' src='../../static/images/go.png'></image>
+        </view>
+      </view>
+    
+      <view class='coupon-middle'>
+        <view class='coupon-middle-a'>店铺优惠券</view>
+        <view class='coupon-middle-b'>立减200</view>
+        <view class='coupon-middle-b'>立减80</view>
+      </view>
+
+      <view class='coupon-bottom'>
+        <view class='coupon-bottom-a'>积分</view>
+        <view class='coupon-bottom-b'>消费可得积分200</view>
+      </view>
+    </view>
+    <!-- E 领券 -->
+
+
+    <!-- S 领券弹出层 -->
+    <view class='coupon-container' bindtap='goout' hidden='{{boxState}}'>
+      <view class='coupon-content'>
+        <view class='privilege'>
+          <view class='title'>优惠</view>
+          <view class='privilege-details'>
+            <view class='privilege-item-a'>
+              <image class='coupon-logo' src='../../static/images/couponDown.png'></image>
+              <view class='coupon-header-get'>满3999至少立减
+                <text class='coupon-header-getNum'>￥100</text>
+              </view>
+            </view>
+            <view class='privilege-item-b'>
+              <view class='coupon-bottom-a'>积分</view>
+              <view class='coupon-bottom-b'>消费可得积分200</view>
+            </view>
+            <view class='privilege-item-c'>
+              <view class='gain'>领券</view>
+              <view class='score'>已有积分：980</view>
+            </view>
+          </view>
+
+
+        </view>
+
+        <view class='getCoupon' bindtap='goout'>
+          <view class='item-list' wx:for="{{discount}}">
+            <view class='item-thumb'>
+              <view class='vip'>
+                <view class='vip-normal'>
+                  <image class='vip-img' src="{{vipUrl[0]}}"></image>普通会员</view>
+              </view>
+              <image class='goodsImg' src='../../static/images/babyGoods.jpg'></image>
+            </view>
+
+            <view class='item-name' >
+              <view class='goodsName'>蜜月餐</view>
+              <view class='item-price'>{{item}}￥</view>
+            </view>
+            <view class='item-opera'>
+              <block wx:if="{{curId == index+1}}" >
+                <button class='btn active' data-id='{{index+1}}' catchtap='obtainCoupon' >领取成功</button>
+              </block>
+
+              <block wx:else>
+                <button class='btn' data-id='{{index+1}}' catchtap='obtainCoupon' >点击领取</button>
+              </block>
+            </view>
+
+          </view>
+        
+        </view>
+        <view class='privilege-bottom'>
+          <view class='prompt'>以上价格仅为初步估计，不代表最终购买价格</view>
+          <button class='finish' catchtap='finish'>完成</button>
+        </view>
+        
+      
+      </view>
+
+    </view>
+    <!-- E 领券弹出层 -->
+
+
+
+
+    
+
+
+
+    <view class='parame'>
+     <view class='goods-parame'>服务详情</view>
+     <view class='contentBox'>
+        <view class='parame-title'>关于妈妈我们做到</view>
+        <view class='parame-detail'>
+          <view>1.湘雅医院妇产科专家查房</view>
+          <view>2.责任母婴师24小时一对一服务，每天评估新妈妈的身体情况</view>
+          <view>3.每天按摩子宫，观察子宫恢复情况</view>
+          <view>4.顺产伤口护理，剖宫产伤口护理</view>
+          <view>5.产后康复护理</view>
+          <view>6.指导母乳喂养</view>
+          <view></view>
+          <view></view>
+          <view></view>
+          <view></view>
+          <view></view>
+          <view></view>
+          <view></view>
+          <view></view>
+          <view></view>
+          <view></view>
+        </view>
+     </view>
+    </view>
+
+
+<!-- 底部 -->
+    <view class="bottom-btn">
+      <view class="l l-collect {{ openAttr ? 'back' : ''}}" bindtap="closeAttrOrCollect">
+        <image class="icon" src="{{ collectBackImage }}"></image>
+      </view>
+      <view class="l l-cart">
+        <view class="box">
+          <text class="cart-count">{{cartGoodsCount}}</text>
+          <image bindtap="openCartPage" class="icon" src="/static/images/ic_menu_shoping_nor.png"></image>
+
+        </view>
+      </view>
+      <block wx:if="{{sellType == 0}}">
+        <view class="c" bindtap='buyGoods'>立即购买</view>
+        <view class="r" bindtap="addToCart">加入购物车</view>
+      </block>  
+      <block wx:else="{{sellType == 1}}" >
+        <navigator url="../appointment/appointment?id='{{id}}'">
+          <view class='appointment'>立即预约</view>
+        </navigator>
+      </block>
+    </view>
+<!-- 底部 -->
+  
+</view>

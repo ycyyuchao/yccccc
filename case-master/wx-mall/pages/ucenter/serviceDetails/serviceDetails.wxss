@@ -1,0 +1,366 @@
+/* pages/ucenter/serviceDetails/serviceDetails.wxss */
+.container {
+  width:100%;
+  background: #f9f9f9;
+}
+.goods {
+  width:100%;
+  background: #fff;
+  margin-top:10rpx;
+  border-top:2rpx solid #ccc;
+  border-bottom:2rpx solid #ccc;
+}
+.item{
+  width: 100%;
+  clear: both;
+  overflow: hidden;
+  padding:20rpx;
+  
+}
+.goodsImg{
+  width: 100rpx;
+  height:100rpx;
+  float: left;
+}
+.goodsDetails {
+  width:75%;
+  float: right;
+  
+}
+.top,.bottom{
+  width:100%;
+  clear: both;
+  overflow: hidden;
+}
+.goodsName{
+  float: left;
+  font-size: 36rpx;
+}
+.price{
+  float: right;
+  font-size: 36rpx;
+  color:#ffaf3d;
+}
+.reduse {
+  float: left;
+  font-size: 28rpx;
+}
+.num{
+  float: right;
+  color:#ffaf3d;
+  font-size:28rpx; 
+}
+
+.sume{
+  width: 100%;
+  font-size: 32rpx;
+  margin-left: 65%;
+  
+}
+.total{
+  color:#ffaf3d;
+  font-size: 44rpx;
+  display:inline-block;
+
+  
+}
+.address{
+  width: 100%;
+  margin-top: 16rpx;
+  display: flex;
+  padding: 20rpx;
+  background: #fff;
+  border-top:2rpx solid #ccc;
+  border-bottom:2rpx solid #ccc;
+}
+.icon {
+  width:60rpx;
+  text-align: center;
+
+}
+.goodImg{
+  width: 60rpx;
+  height:60rpx;
+}
+.distance {
+  font-size: 28rpx;
+}
+.location {
+  width:50%;
+  white-space: pre-wrap;
+  font-size: 28rpx;
+  margin-left:54rpx;
+}
+.goto{
+  width: 32%;
+  font-size: 32rpx;
+  height:60rpx;
+  line-height: 60rpx;
+  border:4rpx solid #65E9C1;
+  border-radius: 30rpx;
+  color:#65E9C1;
+  margin-top: 20rpx;
+  margin-left:20rpx;
+
+
+}
+.tracking {
+  width: 100%;
+  padding:20rpx;
+  background: #fff;
+  margin-top:20rpx;
+  border-top:2rpx solid #ccc;
+  border-bottom: 4rpx solid #ccc;
+
+}
+.title {
+  margin-left: 30rpx;
+
+}
+.status {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+
+
+}
+.orderState {
+  width:120rpx;
+  font-size:28rpx;
+  text-align: center;
+  margin-top:10rpx;
+}
+.stateImg {
+  width:40rpx;
+  height:40rpx;
+  display: block;
+  margin-left:40rpx;
+  margin-bottom:10rpx;
+}
+.orderState::after {
+  content: '';
+  width:100rpx;
+  display: block;
+  border-bottom:4rpx solid #ccc;
+  position: relative;
+  top:-70rpx;
+  right:-80rpx;
+
+}
+.active::after{
+  content: '';
+  display: block;
+  border-bottom:4rpx solid #32b72c;
+}
+.lastOne::after {
+  border:none !important;
+}
+.orderList{
+  width: 100%;
+  padding:20rpx;
+  background: #fff;
+
+}
+.item{
+  display: flex;
+}
+.dot {
+  width:20rpx;
+  height:20rpx;
+  border-radius: 50%;
+  background:#ccc;
+  margin-top:35rpx;
+  margin-right:30rpx;
+
+}
+.stateDetails {
+  flex:7;
+  border-bottom:4rpx solid #ccc;
+  padding:10rpx;
+  position: relative;
+
+}
+.appointTime {
+  font-size: 32rpx;
+
+}
+.trackDetail {
+  margin-top: 14rpx;
+  overflow: hidden;
+  width:100%;
+  clear:both;
+}
+.trackTime{
+  font-size: 24rpx;
+  color:#ccc;
+  float:left;
+  margin-top:20rpx;
+}
+.changeDate,.Ip {
+  float: right;
+  font-size: 28rpx;
+  width:160rpx;
+  height: 50rpx;
+  line-height: 40rpx;
+  color:#65E9C1;
+  border:4rpx solid #65E9C1;
+  border-radius:30rpx;
+
+}
+
+.connection{
+  width:100%;
+  overflow: hidden;
+  clear: both;
+}
+.merchant {
+  float: left;
+  font-size: 32rpx;
+}
+.connectionPhone{
+  font-size: 32rpx;
+  color:#ffaf3d;
+  font-weight: 500;
+  display: inline-block;
+}
+.discrible {
+  font-size:24rpx;
+  color:#ccc;
+  white-space: pre-wrap;
+  margin-top:20rpx;
+
+}
+.appointSuccess,.successTime{
+  font-size: 32rpx;
+  display: inline-block;
+
+}
+.consume,.evaluation {
+  font-size: 32rpx;
+}
+.star {
+  width:40rpx;
+  height:40rpx;
+  margin-right: 10rpx;
+  vertical-align: bottom;
+}
+.message {
+  width:100%;
+  height:200rpx;
+  font-size: 28rpx;
+  border:2rpx solid #ccc;
+  margin-top:16rpx;
+  padding:10rpx;
+}
+.submitInfo {
+  color:#65E9C1;
+  border:4rpx solid #65E9C1;
+  border-radius:40rpx;
+  display: block;
+  text-align: center;
+  width:160rpx;
+  height:60rpx;
+  line-height: 60rpx;
+  margin-top:16rpx;
+}
+.service {
+  border: none;
+}
+
+.first {
+  background: #32b72c;
+}
+.first::after{
+  content:'';
+  width: 120rpx;
+  height:140rpx;
+  display: block;
+  border-left:4rpx dashed #32b72c;
+  position: absolute;
+  bottom:340rpx;
+  left:48rpx;
+}
+.second::after {
+  content:'';
+  width: 120rpx;
+  height:200rpx;
+  display: block;
+  border-left:4rpx dashed #ccc;
+  position: absolute;
+  bottom:110rpx;
+  left:48rpx;
+}
+.third::after {
+  content:'';
+  width: 120rpx;
+  height:120rpx;
+  display: block;
+  border-left:4rpx dashed #ccc;
+  position: absolute;
+  bottom:-40rpx;
+  left:48rpx;
+}
+.fouth::after{
+  content:'';
+  width: 120rpx;
+  height:120rpx;
+  display: block;
+  border-left:4rpx dashed #ccc;
+  position: absolute;
+  bottom:-190rpx;
+  left:48rpx;
+}
+.dateBox{
+  width: 100%;
+  height:100vh;
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 99999;
+  background: #fff;
+}
+.time{
+  width: 100%;
+  border-top:4rpx solid #ccc;
+  margin-top:60rpx;
+}
+.imply {
+  width:100%;
+  margin-top:40rpx;
+  text-align: center;
+  font-size: 28rpx;
+  font-weight: 800;
+
+}
+.timing{
+  padding:10rpx;
+  width:100rpx;
+  font-size: 28rpx;
+  text-align: center;
+  border:4rpx solid #ccc;
+  margin:36rpx;
+  border-radius: 10rpx;
+
+}
+.dateOn {
+  background: #335BE2 !important;
+  color:#fff !important;
+}
+.timeBox{
+  width:100%;
+  padding:20rpx;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.submit{
+  font-size:32rpx;
+  width:150rpx;
+  border:4rpx solid #335BE2;
+  border-radius: 30rpx;
+  text-align: center;
+  position: relative;
+  bottom:-80rpx;
+  left:50%;
+  margin-left: -75rpx;
+}

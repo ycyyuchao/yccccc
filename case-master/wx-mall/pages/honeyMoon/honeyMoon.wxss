@@ -1,0 +1,386 @@
+.container {
+  width:100%;
+}
+.header{
+  width:100%;
+  /* height: calc(100vh - 100rpx); */
+}
+.banner {
+  width:100%;
+  height:400rpx;
+}
+.details{
+    width: 750rpx;
+    height: 306rpx;
+    overflow: hidden;
+    background: #fff;
+}
+
+.details .c{
+    display: block;
+    width: 718.75rpx;
+    height: 100%;
+    margin-left: 31.25rpx;
+    padding: 38rpx 31.25rpx 38rpx 0;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.details .c text{
+    display: block;
+    width: 687.5rpx;
+    text-align: center;
+}
+
+.details .name{
+    height: 41rpx;
+    margin-bottom: 5.208rpx;
+    font-size: 41rpx;
+    line-height: 41rpx;
+}
+
+.details .desc{
+    height: 43rpx;
+    margin-bottom: 41rpx;
+    font-size: 24rpx;
+    line-height: 36rpx;
+    color: #999;
+}
+
+
+.details .price{
+    height: 35rpx;
+    font-size: 35rpx;
+    line-height: 35rpx;
+    color: #b4282d;
+}
+
+/* S 领取优惠券 */
+.coupon {
+  width:100%;
+  padding: 20rpx;
+  background: #fff;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #ccc;
+}
+.coupon-header {
+  width:100%;
+  display:flex;
+  align-items: center;
+ 
+}
+.coupon-header-a{
+  font-size:28rpx;
+  flex:1;
+}
+.coupon-header-b {
+  flex: 3;
+  
+
+}
+.coupon-logo {
+  width:40rpx;
+  height:40rpx;
+  float: left;
+  
+}
+.coupon-header-get {
+  
+  font-size: 28rpx;
+}
+.coupon-header-getNum{
+  font-size: 36rpx;
+  color:#f48f18;
+  display:inline-block;
+}
+.coupon-header-goto {
+  
+  font-size:28rpx;
+}
+.goto {
+  width:30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+}
+.coupon-middle {
+  margin-top:20rpx;
+  margin-bottom:20rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.coupon-middle-a,.coupon-bottom-a {
+  font-size: 28rpx;
+  box-sizing:border-box;
+  padding:10rpx;
+  color:#f48f18;
+  background: #fcebeb;
+  border-radius: 10rpx;
+  
+}
+.coupon-middle-b{
+  font-size:28rpx;
+  width:160rpx;
+  text-align: center;
+  border:#f48f18 2rpx solid;
+  border-radius: 8rpx;
+  color:#f48f18;
+  padding: 10rpx;
+  margin-right:60rpx;
+  
+}
+
+.coupon-bottom {
+  margin-left: 40rpx;
+  overflow: hidden;
+  clear: both;
+}
+.coupon-bottom-a {
+  width:80rpx;
+  float: left;
+  text-align: center;
+}
+.coupon-bottom-b{
+  font-size: 28rpx;
+  margin-left:120rpx;
+  margin-top:10rpx;
+
+}
+/* E 领取优惠券 */
+
+
+/* S 弹出层样式 */
+.coupon-container {
+  width:100%;
+  height: 100vh;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 99;
+  background: rgba(0,0,0,0.2);
+}
+.coupon-content {
+  width: 100%;
+  border: 2rpx solid #ccc;
+  border-radius: 8rpx;
+  position: fixed;
+  bottom:0;
+  left: 0;
+  z-index: 111;
+  background: #fff;
+
+}
+.privilege {
+  width:100%;
+  border-bottom: 4rpx solid #ccc;
+}
+.title {
+  width: 100%;
+  text-align: center;
+  font-size: 36rpx;
+  padding-top:10rpx;
+}
+.privilege-details {
+  width: 100%;
+
+}
+.privilege-item-a,.privilege-item-b,.privilege-item-c {
+  padding:10rpx 20rpx;
+  overflow: hidden;
+}
+.gain {
+  font-size: 24rpx;
+  color: #ccc;
+  float: left;
+}
+.score {
+  font-size: 24rpx;
+  color: #ccc;
+  float: right;
+}
+
+.getCoupon {
+  width:100%;
+
+}
+.item-list {
+  width:100;
+  border-bottom:4rpx solid #ccc;
+  display: flex;
+  padding:10rpx 20rpx;
+  background: #fff;
+}
+.item-thumb {
+  flex:1;
+
+}
+.vip {
+  font-size:24rpx;
+}
+.vip-img {
+  width:24rpx;
+  height:24rpx;
+  vertical-align: top;
+
+}
+.vip-normal {
+  font-size:24rpx;
+  color:#000;
+}
+.goodsImg {
+  width:100rpx;
+  height:100rpx;
+  display:block;
+  margin-right:10rpx;
+}
+.item-name {
+  flex:2;
+  text-align: left;
+}
+.goodsName{
+  font-size: 32rpx;
+  margin-left:40rpx;
+  margin-top:20rpx;
+}
+.item-price {
+  font-size: 40rpx;
+  color:#F00;
+  margin-top:30rpx;
+  margin-left:190rpx;
+}
+.item-opera {
+  flex:1;
+}
+.btn {
+  
+  font-size: 24rpx;
+  display: block;
+  color:#fff;
+  padding:0;
+  border-radius: 40rpx;
+  background:#f00;
+  margin-top:40rpx;
+
+}
+.btn.active {
+  background-color:#999 !important;
+  color:#fff !important;
+}
+
+.privilege-bottom {
+  width: 100%;
+  text-align: center;
+  margin-top:90rpx;
+}
+.prompt {
+  font-size: 24rpx;
+  color: #ccc;
+}
+.finish {
+  width:80%;
+  text-align: center;
+  border-radius: 40rpx;
+  font-size: 36rpx;
+  color:#fff;
+  background-color: #f48f18;
+  margin-bottom: 10rpx;
+}
+/* E 弹出层样式 */
+
+
+
+.bottom-btn{
+    position: fixed;
+    left:0;
+    bottom:0;
+    z-index: 10;
+    width: 750rpx;
+    height: 100rpx;
+    display: flex;
+    background: #fff;
+}
+
+.bottom-btn .l{
+    float: left;
+    height: 100rpx;
+    width: 162rpx;
+    border: 1px solid #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.bottom-btn .l.l-collect{
+    border-right: none;
+    border-left: none;
+    text-align: center;
+}
+
+
+.bottom-btn .l.l-cart .box{
+    position: relative;
+    height: 60rpx;
+    width: 60rpx;
+}
+
+.bottom-btn .l.l-cart .cart-count{
+    height: 28rpx;
+    width: 28rpx;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    right:0;
+    background: #b4282d;
+    text-align: center;
+    font-size: 18rpx;
+    color: #fff;
+    line-height: 28rpx;
+    border-radius: 50%;
+
+}
+
+.bottom-btn .l.l-cart .icon{
+  
+    position: absolute;
+    top: 10rpx;
+    left:0;
+    
+}
+
+
+.bottom-btn .l .icon{
+    display: block;
+    height: 44rpx;
+    width: 44rpx;
+}
+
+.appointment {
+  height: 100rpx;
+  line-height: 96rpx;
+  width:380%;
+  text-align: center;
+  background: #b4282d;
+  color: #fff;
+  font-size: 28rpx;
+
+}
+.bottom-btn .c{
+    float: left;
+    height: 100rpx;
+    line-height: 96rpx;
+    flex: 1;
+    text-align: center;
+    color: #333;
+    border-top: 1px solid #f4f4f4;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.bottom-btn .r{
+    border:1px solid #b4282d;
+    background: #b4282d;
+    float: left;
+    height: 100rpx;
+    line-height: 96rpx;
+    flex: 1;
+    text-align: center;
+    color: #fff;
+}

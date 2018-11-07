@@ -1,0 +1,7 @@
+{
+  "backgroundColor": "#f4f4f4",
+  "usingComponents":{
+    "newbie":"/component/newbie/newbie"
+  }
+ 
+}

@@ -1,0 +1,102 @@
+<!--pages/ucenter/share/share.wxml-->
+<view class='container'>
+  <!-- <view class='header'>
+    <view class='title'>分享圈</view>
+    <navigator url='../../pages/scoreInstruct/scoreInstruct'>
+      <image class='problem' src='../../../static/images/answer.png'></image>
+    </navigator>
+  </view> -->
+
+  <!-- <image class='thumb' src=''></image> -->
+
+  <view class='sub-nav'>
+    <view class='left'>
+      <view class='text'>我的积分：</view>
+      <view class='num'>{{details.point}}</view>
+    </view>
+    <view class='right'>
+      <view class='text'>好友总数：</view>
+      <view class='num'>{{details.friend_num}}</view>
+    </view>
+  </view>
+  <navigator url='../../ranking/ranking'>
+      <view class='ranking'>查看排行榜 >></view>
+  </navigator>
+  <view class='content'>
+    <view class='share-relation'>
+      <view class='share-cate'>我的推荐人</view>
+
+      <block>
+        <navigator url='../shareDetails/shareDetails'>
+          <view class='share-parson'>
+            <image class='share-photo' src='{{details.share_to_me.avatar}}'></image>
+            <view class='share-nick'>
+              <view class='name'>{{details.share_to_me.nickname}}</view>
+              <view class='vip'>
+                <image  class='vip-icon' src='{{vipUrl[1]}}'></image>
+              黄金会员</view>
+            </view>
+            <view class='share-profit'>
+              <view class='share-friends'>
+                <view class='share-title'>好友总数</view>
+                <view class='share-num'>{{details.share_to_me.friend_num}}</view>
+              </view>
+              <view class='share-total'>
+                <view class='share-title'>总积分</view>
+                <view class='share-num'>{{details.share_to_me.point}}</view>
+              </view>
+            </view>
+
+          </view>
+          <view class='share-total'>
+            <view class='share-title'>总贡献值</view>
+            <view class='share-num'>20</view>
+          </view>
+        </navigator>
+        
+        
+      </block>
+      
+    </view>
+
+    <view class='share-relation'>
+      <view class='share-cate'>我的好友</view>
+
+        <block wx:for='{{3}}'>
+          <navigator url='../shareDetails/shareDetails'>
+            <view class='share-parson'>
+              <image class='share-photo' src='../../../static/images/touxiang.jpeg'></image>
+              <view class='share-nick'>
+                <view class='name'>琴棋书画诗酒茶</view>
+                <view class='vip'>
+                  <image  class='vip-icon' src='{{vipUrl[2]}}'></image>
+                黄金会员</view>
+              </view>
+              <view class='share-profit'>
+                <view class='share-friends'>
+                  <view class='share-title'>好友总数</view>
+                  <view class='share-num'>10</view>
+                </view>
+                <view class='share-total'>
+                  <view class='share-title'>总贡献值</view>
+                  <view class='share-num'>20</view>
+                </view>
+              </view>
+            </view>
+          </navigator>
+        </block>
+
+    </view>
+
+
+  </view>
+  <view class="btn-container">
+    <view class="btn-userinfo">
+      <button open-type="share" class='share-to-other'>分享好友</button>
+    </view>
+    <view class="btn-usermotto">
+      <text class="user-motto"></text>
+    </view>
+  </view>
+</view>
+

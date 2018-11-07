@@ -1,0 +1,95 @@
+<!--pages/newbie/newbie.wxml-->
+<view class='container'>
+  <image class='redpocket' src='../../static/images/redpocket.png'></image>
+  <button class='get' catchtap='get'>立即领取</button>
+
+
+  <view class='gifePacks' hidden='{{couponState}}'>
+    <image class='backto' src='../../static/images/backto.png' catchtap='latent'></image>
+    <view class='giftCard'>
+      <view class='header'>
+        <image class='stars1' src='../../static/images/stars.png'></image>
+        <view class='giftTitle'>新人专属优惠</view>
+        <view class='giftCate'>恭喜您获得100积分和{{canGet.name}}</view>
+        <image class='stars2' src='../../static/images/stars.png'></image>
+      </view>
+      <view class='gift'>
+        <block wx:for="{{newUserCoupon}}">
+          <view class='item'>
+            <view class='giftTop'>
+              <image class='giftImg' src='../../static/images/babyGoods.jpg'></image>
+              <view class='giftName'>健贝雅月子中心【{{item.name}}】</view>
+
+              <button catchtap="{{item.send_type==1?'toUse':'toShare'}}" class='toUse'>{{item.send_type ==1 ?"去使用":"去翻倍"}}</button>
+            </view>
+
+            <view class='GiftPrice'>{{item.send_type ==1 ?"体验券":item.type_money+"元"}}</view>
+          </view>
+        </block>
+        <!-- <view class='item'>
+          <view class='giftTop'>
+            <image class='giftImg' src='../../static/images/babyGoods.jpg'></image>
+            <view class='giftName'>健贝雅月子中心【蜜月套餐】</view>
+            <button class='toUse' catchtap='toDouble'>领取</button>
+          </view>
+          <view class='GiftPrice'>￥-1000</view>
+        </view>
+        <view class='item'>
+          <view class='giftTop'>
+            <image class='giftImg' src='../../static/images/babyGoods.jpg'></image>
+            <view class='giftName'>健贝雅月子中心【温馨月子餐】</view>
+            <button class='toUse' catchtap='toDouble'>领取</button>
+          </view>
+          <view class='GiftPrice'>￥-500</view>
+        </view> -->
+
+
+      </view>
+
+    </view>
+  </view>
+
+
+  <!-- <view class='double' hidden='{{doubleState}}'>
+    <image class='backto' src='../../static/images/backto.png' catchtap='latent'></image>
+    <view class='doubleBox'>
+      <view class='header'>
+        <image class='stars1' src='../../static/images/stars.png'></image>
+        <view class='giftTitle'>恭喜您成功领取</view>
+        <view class='giftCate'>蜜月套餐优惠券一张</view>
+        <image class='stars2' src='../../static/images/stars.png'></image>
+      </view>
+      <view class='gift'>
+        <view class='item'>
+          <view class='giftTop'>
+            <image class='giftImg' src='../../static/images/babyGoods.jpg'></image>
+            <view class='giftName'>健贝雅月子中心【蜜月套餐】</view>
+            <button class='toUse' catchtap='toShare'>去翻倍</button>
+          </view>
+          <view class='GiftPrice'>￥-1000</view>
+        </view>
+      </view>
+    </view>
+  </view> -->
+
+
+  <view class='share' hidden='{{shareState}}'>
+    <image class='shareBg' src='../../static/images/double.png'></image>
+    <view class='share-header'>
+      <view class='share-title'>恭喜！您已获得翻倍优惠券</view>
+      <view class='share-num'>￥100</view>
+      <button class='share-coupon'>查看优惠券 ></button>
+    </view>
+    <view class='share-help'>
+      <view class='share-item' wx:for="{{shareDetail}}">
+        <image class='sharePocket' src='../../static/images/shareRed.png'>{{item.num}}</image>
+        <view class='share-add'>{{item.num}}</view>
+        <view class='share-cate'>{{item.cate}}</view>
+      </view>
+    </view>
+    <view class='share-people'>
+      <image class='share-photo' src='../../static/images/touxiang.jpeg' wx:for="{{5}}"></image>
+    </view>
+    <button class='shareToOthers' catchtap='shareTo'>邀请好友 帮我翻倍</button>
+  </view>
+</view>

@@ -1,0 +1,130 @@
+<view class="container">
+  <view class="header">
+    <button class="userinfo" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">
+        
+      <image wx:if="{{userInfo && userInfo.avatarUrl}}" class="userinfo-avatar" src="{{ userInfo.avatarUrl }}" background-size="cover"></image>
+    </button>  
+    
+    <text class="userinfo-nickname" wx:text="{{ userInfo.nickName }}">{{userInfo.nickName}}</text>
+    <navigator url='/pages/ucenter/signin/signin'>
+
+    <view class='signin'>每日签到</view>
+    </navigator>
+    <view class='vip' >
+      <navigator url="../../../pages/vip/vip" class="a">
+        <image class='vip-photo' src='{{vipUrl[1]}}'></image>
+        <text class="userinfo-nickname" style='margin-left:4px;'>普通会员</text>
+      </navigator>
+    </view>
+
+  </view>
+  <view style="background: #eee;width:100%;"></view>
+  <view class="my-item" style='background:none;display:flex;flex-direction:column;height:auto;'></view>
+  
+  <view class="user-menu">
+    <view class="item">
+      <navigator url="/pages/ucenter/order/order" class="a">
+        <text class="icon order"></text>
+        <text class="txt">我的订单</text>
+      </navigator>
+    </view>
+    <view class="item">
+      <navigator url="/pages/ucenter/coupon/coupon" class="a">
+        <text class="icon coupon"></text>
+        <text class="txt">优惠券</text>
+      </navigator>
+    </view>
+    <view class="item no-border">
+      <navigator url="/pages/shopCenter/shopCenter" class="a">
+        <text class="icon gift"></text>
+        <text class="txt">领券中心</text>
+      </navigator>
+    </view>
+    <view class="item">
+      <navigator url="/pages/ucenter/collect/collect" class="a">
+        <text class="icon address"></text>
+        <text class="txt">我的收藏</text>
+      </navigator>
+    </view>
+    <view class="item">
+      <navigator url="/pages/ucenter/footprint/footprint" class="a">
+        <text class="icon security"></text>
+        <text class="txt">我的足迹</text>
+      </navigator>
+    </view>
+    <view class="item no-border">
+      <navigator url="/pages/ucenter/share/share" class="a">
+        <text class="icon kefu"></text>
+        <text class="txt">分享圈</text>
+      </navigator>
+    </view>
+    <view class="item">
+      <navigator url="../address/address" class="a">
+        <text class="icon address"></text>
+        <text class="txt">地址管理</text>
+      </navigator>
+    </view>
+    <view class="item">
+      <navigator url="url" class="a">
+        <text class="icon security"></text>
+        <text class="txt">账号安全</text>
+      </navigator>
+    </view>
+    <button class='service' open-type="contact">
+      <view class="item no-border">
+        <navigator url="url" class="a">
+          <text class="icon kefu"></text>
+          <text class="txt">联系客服</text>
+        </navigator>
+      </view>
+    </button>
+    <view class="item item-bottom">
+      <navigator url="url" class="a">
+        <text class="icon help"></text>
+        <text class="txt">帮助中心</text>
+      </navigator>
+    </view>
+    <view class="item item-bottom">
+      <navigator url="/pages/ucenter/feedback/feedback" class="a">
+        <text class="icon feedback"></text>
+        <text class="txt">意见反馈</text>
+      </navigator>
+    </view>
+    <view class="item item-bottom" v-if="hasMobile != ''">
+      <navigator url="/pages/auth/mobile/mobile" class="a">
+        <text class="icon phone"></text>
+        <text class="txt">绑定手机</text>
+      </navigator>
+    </view>
+  </view>
+  <view style='background-color:#fff;border:1px solid #ccc;'>
+    <view style='border-bottom:1px solid #ccc;height:50px;'>
+      <text style='font-weight:bolder;font-size:18px;line-height:50px;margin-left:10px;'>分享达人享收益</text>
+      <view style='float:right;'>
+        <navigator url="/pages/incominfo/incominfo?val={{point}}" class="a">
+          <text style='color:#239476 !important;line-height:50px;margin-right:10px;'>收益明细</text>
+          <!--<image src="../../static/images/address_right.png"></image>-->
+        </navigator>
+      </view>
+    </view>
+    <view style='padding:10px;overflow:hidden;'>
+
+    <navigator url='/pages/incominfo/incominfo?val={{point}}'>
+      <view style="float:left;width:32%;margin-left:10%;">
+        <text style='font-weight:bolder;font-size:17px;padding:'>{{weekpoint}} \n</text>
+        <text>本周收益</text>
+      </view>
+    </navigator>
+    <navigator url='/pages/incominfo/incominfo?val={{point}}'> 
+      <view style='float:right;margin-right:10%;text-align:center;'>
+        <text style='font-weight:bolder;font-size:17px;'>{{point}} \n</text>
+        <text>总收益</text>
+      </view>
+    </navigator>
+    </view>
+  </view>
+  <view class="logout" bindtap="exitLogin">退出登录</view>
+
+  <newbie class="{{newGift}}" hidden=""  style="display:{{ishow}}"></newbie>
+</view>
+

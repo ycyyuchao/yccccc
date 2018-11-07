@@ -1,0 +1,33 @@
+<!--pages/ranking/ranking.wxml-->
+<view class='container'>
+  <!-- <view class='header'>收益排行榜</view> -->
+
+  <block wx:for="{{details}}">
+    <view class='share-parson'>
+      <image class='rank' wx:if="{{index === 0}}" src='../../static/images/au.png'></image>
+      <image class='rank' wx:if="{{index == 1}}" src='../../static/images/ag.png'></image>
+      <image class='rank' wx:if="{{index == 2}}" src='../../static/images/cu.png'></image>
+       <image class='rank' wx:if="{{3>1&&index!=0&&index!=1&&index!=2}}" src=''></image>
+      <image class='share-photo' src='{{item.avatar}}'></image>
+      <view class='share-nick'>
+        <view class='name'>{{item.nickname}}</view>
+        <view class='vip'>
+          <image class='vip-icon' src='{{vipUrl[2]}}'></image>
+          黄金会员</view>
+      </view>
+      <view class='share-profit'>
+        <view class='share-friends'>
+          <view class='share-title'>好友总数</view>
+          <view class='share-num'>10</view>
+        </view>
+        <view class='share-total'>
+          <view class='share-title'>总收益</view>
+          <view class='share-num'>{{item.point}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+
+
+
+</view>
