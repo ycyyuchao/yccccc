@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "vue-base64-file-upload": "^1.0.4"
+  }
+}

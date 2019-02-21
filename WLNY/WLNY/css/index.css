@@ -1,0 +1,240 @@
+	body{
+			padding:0;
+			background:#fff;
+		}
+		.container{
+			padding:0;
+			width:100%;
+			background:#fff;
+		}
+		#navbar{
+			width:100%;
+			margin:0 auto;
+		}
+		.navbar{
+			border:none;
+			margin-bottom:0;
+		}
+		
+		.container-fluid{
+			background:#fff;
+		}
+	
+		
+		.mini-layout-sidebar{
+			width:70%;
+			overflow:hidden;
+			float:left;
+		}
+		.mini-layout-sidebar p{
+			height:40px;
+			overflow:hidden;
+		}
+
+		.mini-layout-body{
+			width:30%;
+			float:right;
+		}
+		.Pcstyle{
+			width:100%;
+		}
+		.buttom{
+			height: 205px;
+			width: 100%;
+			background-color: rgb(27, 29, 34);
+			color: #fff;
+		}
+		@media (min-width: 800px) {
+			.Pcstyle{
+				margin:20px auto;
+			}
+			
+			.mini-layout-sidebar p{
+				overflow:visible;
+			}
+			.item{
+				width:30%;;
+				margin-left:2%;
+				height:320px;
+			}
+		}
+		.dev-left{
+			width:90%;
+		}
+		.dev-left-list .dev-left-new-img{
+			margin-top:2%;
+			width:25%;
+			height:90px;
+			background-color: #f1f1f1;
+			float: left;
+		}
+		.dev-left-list .dev-left-new .dev-left-bg{
+			padding: 24px 20px;
+		}
+		.dev-left-list  .dev-left-new-content{
+			width:69%;
+			height: 100px;
+			float: left;
+			overflow: hidden;
+			margin:2%;
+			margin-top:0%;
+		}
+
+		.dev-left-list .dev-left-new-title{
+			margin-top:2%;
+			float:right;
+			width:100%;
+			color: #090b18;
+			font-size:1.8rem;
+			float: left;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+		
+		.dev-left-new-date{
+			float:right;
+		}
+		.dev-left-list  .dev-left-new-des {
+			font-size:1.2rem;
+			text-indent:2.4rem;
+			line-height:2.2rem;
+			color:#75767b;
+			float:right;
+			color: #090b18;
+			float: left;
+			overflow: hidden;
+		}
+		.dev-left-topic{
+			font-size:2rem;
+			    width: 96%;
+				margin: 3% auto;
+				color: #161414;
+		}
+		.dev-right-topic{
+			font-size:2rem;
+			    width: 96%;
+				margin: 3% auto;
+				color: #161414;
+		}
+		
+		
+		.dev-right .dev-right-list {
+			
+			cursor: pointer;
+			background-color: #f8f8f8;
+			border: 1px solid #ededed;
+		}
+		.dev-right-list .dev-right-bg{
+			padding:20px;
+		}
+		
+		 .dev-right-new {
+			margin-bottom:8%;
+		 }
+		 .dev-right-new .dev-right-img{
+			margin-bottom:2%;
+			height: 120px;
+			background-color: #f1f1f1;
+		}
+		.dev-right-new-title{
+			margin: 10px 0px;
+			color: #090b18;
+				overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+		.dev-right-new-content{
+			color: rgba(9,11,24,0.6);
+			overflow: hidden;
+			font-size:14px;
+			text-indent:28px;
+			line-height:18px;
+			height: 36px;
+			text-overflow: ellipsis;
+		}
+		#newslist-details{
+			display: none;
+		}
+		.dev-nav{
+			height: 65px;
+			width: 100%;
+			border-bottom: 2px solid #0bb39d;;
+			
+		}
+		.dev-nav a{
+			text-decoration: none;
+			line-height: 65px;
+		}
+		.dev-left-new{
+			padding-bottom:120px;	
+			border-bottom:1px solid #e6e6e6;
+		}
+		
+		
+		.dev-main .dev-details-da{
+			margin-top: 25px;
+			margin-bottom: 50px;
+		}
+		.dev-main .dev-details-da .dev-details-date,.dev-details-author{
+			float: left;
+			margin-right: 50px;
+			padding-right: 20px;
+			color: #12172d;
+		}
+		.dev-details-content{
+				color: #12172d;
+				 text-indent:30px;
+		}
+		.dev-main .dev-details-bottom{
+			margin-top: 50px;	
+
+		}
+		.dev-main .dev-details-bottom .dev-details-preo{
+			float: left;
+			width: 100%;
+			cursor: pointer;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+		.dev-main .dev-details-bottom .dev-details-next{
+			float: left;
+			text-align: left;
+			width: 100%;
+			cursor: pointer;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+		.dev-main .dev-details-bottom a:hover{
+			text-decoration:underline;
+			color: rgba(9,11,24,0.6);
+		}
+		
+		@media (max-width:750px) {
+			.mini-layout-body{
+				width:100%;
+			}
+			.dev-left-topic{
+				margin:10% auto;
+			}
+			.mini-layout-sidebar{
+				width:100%;
+			}
+			.dev-right-list{
+				width:100%;
+			}
+		}
+		
+		
+		@media (min-width:1200px) {
+			.container {
+				width: 1200px;
+			}
+			
+			.container-fluid{
+				width: 1200px;
+			}
+			
+		}

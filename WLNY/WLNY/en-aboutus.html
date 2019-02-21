@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>FUTURE AGRICULTUPAL</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link href="css/navbar.css" rel="stylesheet">
+
+	<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+	<script  type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/ie10-viewport-bug-workaround.js"></script>
+	<script src="js/swiper.min.js"></script>
+    <style>
+		
+		body{
+			padding:0;
+			background:#fff;
+		}
+			li{
+			list-style: none;
+		}
+		 .top{
+            position: relative;
+        }
+        .top-content {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    font-size: 12px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family:  '微软雅黑';
+        }
+		.container{
+			padding:0;
+			width:100%;
+		
+		}
+		#navbar{
+			width:100%;
+			margin:0 auto;
+		}
+		.navbar{
+			border:none;
+			margin-bottom:0;
+		}
+		
+		.container-fluid{
+			background:#fff;
+		}
+	
+	
+		.mini-layout-sidebar{
+			width:46.5%;
+			overflow:hidden;
+			float:right;
+		}
+		.mini-layout-sidebar p{
+			height:100px;
+			overflow:hidden;
+		}
+
+		.mini-layout-body{
+			width:51.5%;
+			float:left
+		}
+		
+		.buttom{
+			height: 205px;
+			width: 100%;
+			background-color: rgb(27, 29, 34);
+			color: #fff;
+		}
+			.buttom .url {
+        width: 500px;
+        float: right;
+        padding-top: 60px;
+    }
+
+    .buttom .url .code {
+        width: 90px;
+        height: 90px;
+        float: left;
+        margin-right: 30px;
+        background-color: #fff;
+    }
+
+    #bottom-url li {
+        margin-top: 6px;
+    }
+
+    @media (max-width: 600px) {
+      body {
+overflow-x:hidden;
+}
+        .nav1200 ul li {
+            list-style: none;
+            margin-top: 1rem;
+            margin-left: 1rem;   
+        }
+        #factive{
+            color:  #FFBC16;
+        }
+        .nav1200 ul li a {
+            color: #636673;
+            font-size: 1.6rem;
+            text-decoration: none;
+        }
+        .navbar {
+
+            display: inline;
+        }
+        .top-content{
+            margin-top: 30px;
+        }
+  		.mini-layout-body{
+  			display: none;
+  		}
+            .buttom .url {
+        position: absolute;
+       font-size: 1.2rem;
+        padding-top: 60px;
+         width: 100%;
+    }
+    }
+		@media (min-width: 800px) {
+			  .nav1200 {
+            position: absolute;
+            z-index: 2;
+            right: 30px;
+        }
+        .nav1200 ul li {
+            list-style: none;
+            margin-left: 5rem;
+            margin-top: 1rem;
+            color: #fff;
+        }
+        .nav1200 ul li a {
+            color: #fff;
+            font-size: 1.6rem;
+            text-decoration: none;
+        }
+          .nav-title-ch{
+            font-size: 4.0rem;
+        }
+        .nav-title-en{
+            font-size: 1.6rem;
+        }
+        .nav-dow{
+            font-size: 1.0rem;
+        }
+			.Pcstyle{
+				margin:20px auto;
+			}
+			.mini-layout-body{
+				margin-right:8%;
+				width:45.5%;
+			}
+			.mini-layout-sidebar p{
+				overflow:visible;
+			}
+			.item{
+				width:30%;;
+				margin-left:2%;
+				height:320px;
+			}
+		}
+		
+		@media (min-width:1200px) {
+	   .nav-title-ch{
+            font-size: 6.0rem;
+        }
+        .nav-title-en{
+            font-size: 3.6rem;
+        }
+        .nav-dow{
+            font-size: 2.0rem;
+        }
+        .nav1200{
+                position: absolute;
+             z-index: 2;
+           right: 30px;
+        }
+     .nav1200 ul li{
+        list-style: none;
+        margin-left: 5rem;
+        margin-top: 1rem;
+        color: #fff;
+     }
+     .nav1200 ul li a{
+        color: #fff;
+        font-size: 1.6rem;
+        text-decoration: none;
+     }
+        .top{
+            position: relative;
+        }
+        .top-content {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    font-size: 12px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family:  '微软雅黑';
+        }
+			.container {
+				width: 1200px;
+			}
+			
+			.container-fluid{
+				width: 1200px;
+			}
+			
+		}
+	</style>
+  </head>
+  <body>
+<body>
+  <div class="top">
+            <div class="container">
+          
+              <nav class="nav1200">
+                    <ul style="float:right">
+                        <li class="activeColor" style="float:left;"><a  href="en-index.html">Index</a></li>
+                        <li style="float:left"><a id="factive" style="border-bottom: 2px solid #fff"  href="en-aboutus.html">About Us</a></li>
+                        <li style="float:left"><a href="en-team.html">The Team</a></li>
+                        <li style="float:left"><a href="en-dev-dynamic.html">Trends</a></li>
+                       <li style="float:left"><a href="index.html" >中/</a><a style="color: #FFBC16">EN</a></li>
+                    </ul>
+                </nav>
+</div>
+
+          <div class="top-content">
+                <!-- <p class="nav-title-ch" >未来农业</p> -->
+                <p class="nav-title-en" >FUTURE AGRICULTUPAL </p>
+                <p></p>
+                <div class="nav-dow" style="padding: 5px; border: 1px solid #fff"><a style="color: #fff" href="http://t5chain.pro/xzbweb/static/pdf/whitepaper.pdf" download="http://t5chain.pro/xzbweb/static/pdf/whitepaper.pdf">Download The FAT Write Book</a></div>
+            </div>
+            <img src="img/index1.png" style="width:100%">
+        
+        </div>
+	<div class="container-fluid" style="margin:6rem auto;">
+		<div class="row-fluid">
+			<div class="mini-layout-body">
+				<img src="img/a9.png" style="max-width: 100%;" />
+			</div>
+	<!-- 		<div class="mini-layout-sidebar">
+				<h3>
+                     未来农业
+                </h3>
+				<p class="Pcstyle" style="color:#7e7f80;">
+					未来农业基金会是致力于解决传统农业小、散、乱局面，打造前端生产过程与终端的市场和消费者紧密连接的格局，基于国家所倡导的新型城镇化的发展，将世界互联网大会的永久会址乌镇打造成智慧农业的标杆小镇
+				</p>
+			</div> -->
+			       <div class="aboutus-content" >
+                    <div class="a-des" style="font-size: 14px;padding: 40px;">
+                        <p class="a-chtitle f-letter" style="font-size: 2.2rem;">FUTURE<b>AGRICUTURE</b>—</p>
+                        <!-- <p class="a-entitle f-ro f-letter">FUTURE AGRICUTURE</p> -->
+                        <p class="a-con"></p>
+                    </div>
+                </div>
+		</div>
+	</div>
+	
+	<div class="container" style="display:block;margin:5rem auto;">
+		<nav class="navbar navbar-default" style="width:100%;margin:0 auto;padding:0 2%;background:#fff;border:none;">
+			<b style="float:left;font-size:2.2rem;line-height:50px;">Has Cast Project</b>
+		</nav>
+    </div>
+	<div class="container" style="margin-top:6rem;overflow:hidden;">
+         <div class="carousel-inner1">
+			<div class="swiper-wrapper swiper-wrapperLogo">
+			</div>
+               <div class="swiper-button-next1 "></div>
+                    <div class="swiper-button-prev1 "></div>
+		</div>
+    </div>
+	
+
+	
+	
+
+             <div class="buttom">
+            <div class="container " style="margin-top:6rem; ">
+                <div class="url">
+                    <div class="code"><img src="img/code.jpg" style="width: 90px;height: 90px;"></div>
+                    <ul id="bottom-url">
+                        <li><a href="https://weibo.com/FatChain" style="color: #fff;">weibo：https://weibo.com/FatChain</a></li>
+                        <li><a href="http://twitter.lianpuie.com/?5072" style="color: #fff;">Twitter：http://twitter.lianpuie.com/?5072</a></li>
+                        <li><a href="FatChain@126.com" style="color: #fff;">E-mail：FatChain@126.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+   
+	
+   </body> 
+   
+   
+   <script>
+   
+   $(document).ready(function() {
+		window.onresize=resizeBannerImage;//当窗口改变宽度时执行此函数
+		function resizeBannerImage(){
+			var winW = $(window).width();
+			if( 600 <= $(window).width() && $(window).width() < 900 ) {
+				getInvest("3");
+			}else if( $(window).width() < 600){
+				getInvest("1");
+			}else if($(window).width() > 900 ){
+				getInvest("4");
+			}
+		}
+		resizeBannerImage();
+        getAboutus(1);
+        getAboutus(2);
+    });
+   
+     function getAboutus(page) {
+        var urls1 = "http://t5chain.pro/xzbweb/";
+
+        $.ajax({
+            type: "get", //方法类型
+            dataType: "json", //预期服务器返回的数据类型
+            url: urls1 + "/xzbWebEng/getCompany?page="+page, //url
+            success: function(data) {
+                var d = data.data;
+                 var list = d.list;
+                
+                $.each(list, function(index, item) {
+              $(".a-con").append(item.cintroduce);
+                });
+            },
+
+            error: function() {
+                alert("ERROR!");
+            }
+        });
+    }
+   
+   function getInvest(nmubee) {
+		var urls = "http://t5chain.pro/xzbweb/";
+		var i =""
+		$(".swiper-wrapperLogo").html("")
+		
+        $.ajax({
+            type: "get", //方法类型
+            dataType: "json", //预期服务器返回的数据类型
+            url: urls+"/xzbWebEng/getItemList", //url
+            success: function(data) {
+                var d = data.data;
+                $.each(d, function(index, item) {
+                    
+                  i += "<div class='swiper-slide'><img src='" + urls + item.image + "'  style='width:100%;height:160px;padding:8%;'/></div>"
+                });
+				$(".swiper-wrapperLogo").append(i)
+				var swiper = new Swiper('.carousel-inner1', {
+					slidesPerView: nmubee,
+					spaceBetween: 30,
+					loop: true,
+				      navigation: {
+                        nextEl: '.swiper-button-next1',
+                        prevEl: '.swiper-button-prev1',
+                    },
+				});
+            },
+            error: function() {
+                alert("系统链接出问题!");
+            }
+        });
+    }
+ 
+</script>
+</html>

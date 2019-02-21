@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>第五空间</title>
+    <link />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+      .container-fluid {
+        padding: 0;
+        width: 100%;
+      }
+      a {
+        text-decoration: none;
+      }
+      img {
+        display: block;
+      }
+    </style>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- 状态栏的值可能为black, default, black-translucent -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait" />
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes" />
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application" />
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait" />
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true" />
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app" />
+    <!-- 是针对一些老的不识别viewport的浏览器，列如黑莓 -->
+    <meta name="HandheldFriendly" content="true" />
+    <!-- 微软的老式浏览器 -->
+    <meta name="MobileOptimized" content="320" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+  </head>
+
+  <body>
+    <div id="app" class="container-fluid"></div>
+    <script src="./dist/build.js"></script>
+    <script>
+      (function isAndroid() {
+        var u = navigator.userAgent;
+        var _isAndroid = u.indexOf("Android") > -1 || u.indexOf("Linux") > -1; // android终端或者uc浏览器
+        
+        if (_isAndroid) {
+          var meta = document.createElement("meta");
+          meta.name = "viewport";
+          meta.content ="width=device-width, initial-scale=0,user-scalable=yes,maximum-scale=1.0";
+          document.head.appendChild(meta);
+        }
+        console.log("android " + _isAndroid);
+        return _isAndroid;
+      })();
+
+      //苹果端或者Safri浏览器
+
+      (function isIOS() {
+        var u = navigator.userAgent;
+
+        var _isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); // ios终端
+        if (_isIOS) {
+          var scale = 1 / window.devicePixelRatio;
+          var meta = document.createElement("meta");
+          meta.name = "viewport";
+          meta.content ="width=375px,initial-scale=0.33333";
+          document.head.appendChild(meta);
+        }
+        console.log("iOS " + _isIOS);
+
+        return _isIOS;
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,688 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>未来农业</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <link href="css/navbar.css" rel="stylesheet">
+
+    <script>
+        window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+    </script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/ie10-viewport-bug-workaround.js"></script>
+    <style>
+        body {
+            padding: 0;
+            background: #fff;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        .container {
+            padding: 0;
+            width: 100%;
+        }
+        
+        #navbar {
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        .navbar {
+            border: none;
+            margin-bottom: 0;
+        }
+        
+        .top {
+            position: relative;
+        }
+        
+        .top-content {
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            font-size: 12px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-family: '微软雅黑';
+        }
+        
+        .container-fluid {
+            background: #fff;
+        }
+        
+        .mini-layout-sidebar {
+            width: 70%;
+            overflow: hidden;
+            float: left;
+        }
+        
+        .mini-layout-sidebar p {
+            height: 40px;
+            overflow: hidden;
+        }
+        
+        .mini-layout-body {
+            width: 30%;
+            float: right;
+        }
+        
+        .Pcstyle {
+            width: 100%;
+        }
+        
+        .buttom {
+            height: 205px;
+            width: 100%;
+            background-color: rgb(27, 29, 34);
+            color: #fff;
+        }
+        
+        .buttom .url {
+            width: 500px;
+            float: right;
+            padding-top: 60px;
+        }
+        
+        .buttom .url .code {
+            width: 90px;
+            height: 90px;
+            float: left;
+            margin-right: 30px;
+            background-color: #fff;
+        }
+        
+        #bottom-url li {
+            margin-top: 6px;
+        }
+        
+        #index {
+            color: rgba(22, 20, 20, 0.5);
+        }
+        
+        @media (min-width: 600px) {
+            .nav1200 {
+                position: absolute;
+                z-index: 2;
+                right: 30px;
+            }
+            .nav1200 ul li {
+                list-style: none;
+                margin-left: 5rem;
+                margin-top: 1rem;
+                color: #fff;
+            }
+            .nav1200 ul li a {
+                color: #fff;
+                font-size: 1.6rem;
+                text-decoration: none;
+            }
+            .nav-title-ch {
+                font-size: 4.0rem;
+            }
+            .nav-title-en {
+                font-size: 1.6rem;
+            }
+            .nav-dow {
+                font-size: 1.0rem;
+            }
+            .Pcstyle {
+                margin: 20px auto;
+            }
+            .mini-layout-sidebar p {
+                overflow: visible;
+            }
+            .item {
+                width: 30%;
+                ;
+                margin-left: 2%;
+                height: 320px;
+            }
+            .dev-left-list .dev-left-new-img {
+                margin-top: 2%;
+                width: 160px;
+                height: 100px;
+                background-color: #f1f1f1;
+                float: left;
+            }
+            .dev-left-new-imgs {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        
+        .dev-left {
+            width: 90%;
+        }
+        
+        .dev-left-list .dev-left-new .dev-left-bg {
+            padding: 24px 20px;
+        }
+        
+        .dev-left-list .dev-left-new-content {
+            width: 69%;
+            height: 100px;
+            float: left;
+            overflow: hidden;
+            margin: 2%;
+            margin-top: 0%;
+        }
+        
+        .dev-left-list .dev-left-new-title {
+            margin-top: 4%;
+            float: right;
+            width: 80%;
+            color: #090b18;
+            font-size: 1.8rem;
+            float: left;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            cursor: pointer;
+        }
+        
+        .dev-left-new-date {
+            margin-top: 4%;
+            float: right;
+        }
+        
+        .dev-left-list .dev-left-new-des {
+            margin-top: 2%;
+            font-size: 1.2rem;
+            line-height: 1.9rem;
+            color: #75767b;
+            float: right;
+            color: #090b18;
+            height: 40px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        
+        .dev-left-topic {
+            font-size: 2rem;
+            width: 96%;
+            margin: 3% auto;
+            color: #161414;
+        }
+        
+        .dev-right-topic {
+            font-size: 2rem;
+            width: 96%;
+            margin: 3% auto;
+            color: #161414;
+        }
+        
+        .dev-right .dev-right-list {
+            cursor: pointer;
+            background-color: #f8f8f8;
+            border: 1px solid #ededed;
+        }
+        
+        .dev-right-list .dev-right-bg {
+            padding: 20px;
+        }
+        
+        .dev-right-new {
+            margin-bottom: 8%;
+        }
+        
+        .dev-right-new .dev-right-img {
+            margin-bottom: 2%;
+            height: 120px;
+            background-color: #f1f1f1;
+        }
+        
+        .dev-right-new-title {
+            margin: 10px 0px;
+            color: #090b18;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        
+        .dev-right-new-content {
+            color: rgba(9, 11, 24, 0.6);
+            overflow: hidden;
+            font-size: 14px;
+            text-indent: 28px;
+            line-height: 18px;
+            height: 36px;
+            text-overflow: ellipsis;
+        }
+        
+        #newslist-details {
+            display: none;
+        }
+        
+        .dev-nav {
+            height: 65px;
+            width: 100%;
+            border-bottom: 2px solid #FFBC16;
+            ;
+        }
+        
+        .dev-nav a {
+            text-decoration: none;
+            line-height: 65px;
+        }
+        
+        .dev-left-new {
+            padding-bottom: 130px;
+            border-top: 1px solid #e6e6e6;
+        }
+        
+        .dev-main .dev-details-da {
+            margin-top: 25px;
+            margin-bottom: 70px;
+        }
+        
+        .dev-main .dev-details-da .dev-details-date,
+        .dev-details-author {
+            float: left;
+            margin-right: 50px;
+            padding-right: 20px;
+            color: #12172d;
+        }
+        
+        .dev-details-content {
+            color: #12172d;
+            text-indent: 30px;
+            line-height: 2.1rem;
+        }
+        
+        .dev-main .dev-details-bottom {
+            margin-top: 50px;
+        }
+        
+        .dev-main .dev-details-bottom .dev-details-preo {
+            float: left;
+            width: 100%;
+            cursor: pointer;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        
+        .dev-main .dev-details-bottom .dev-details-next {
+            float: left;
+            text-align: left;
+            width: 100%;
+            cursor: pointer;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        
+        .dev-main .dev-details-bottom a:hover {
+            text-decoration: underline;
+            color: rgba(9, 11, 24, 0.6);
+        }
+        
+        @media (max-width:600px) {
+            body {
+                overflow-x: hidden;
+            }
+            .nav1200 ul li {
+                list-style: none;
+                margin-top: 1rem;
+                margin-left: 1rem;
+            }
+            #factive {
+                color: #FFBC16;
+            }
+            .nav1200 ul li a {
+                color: #636673;
+                font-size: 1.6rem;
+                text-decoration: none;
+            }
+            .navbar {
+                display: inline;
+            }
+            .top-content {
+                margin-top: 30px;
+            }
+            .mini-layout-body {
+                width: 100%;
+            }
+            .dev-left-topic {
+                margin: 10% auto;
+            }
+            .mini-layout-sidebar {
+                width: 100%;
+            }
+            .dev-right-list {
+                width: 100%;
+            }
+            .buttom .url {
+                position: absolute;
+                font-size: 1.2rem;
+                padding-top: 60px;
+                width: 100%;
+            }
+            .dev-left-list .dev-left-new-img {
+                /*margin-top:2%;*/
+                margin: 2% auto;
+                width: 160px;
+                height: 100px;
+                background-color: #f1f1f1;
+            }
+            .dev-left-new-imgs {
+                width: 100%;
+                height: 100%;
+            }
+            .dev-left-list .dev-left-new-content {
+                width: 100%;
+                padding-left: 5%;
+                height: 100px;
+                float: left;
+                overflow: hidden;
+                margin: 2%;
+                margin-top: 0%;
+            }
+        }
+        
+        @media (min-width:1200px) {
+            .nav-title-ch {
+                font-size: 6.0rem;
+            }
+            .nav-title-en {
+                font-size: 3.6rem;
+            }
+            .nav-dow {
+                font-size: 2.0rem;
+            }
+            .nav1200 {
+                position: absolute;
+                z-index: 2;
+                right: 30px;
+            }
+            .nav1200 ul li {
+                list-style: none;
+                margin-left: 5rem;
+                margin-top: 1rem;
+                color: #fff;
+            }
+            .nav1200 ul li a {
+                color: #fff;
+                font-size: 1.6rem;
+                text-decoration: none;
+            }
+            .top {
+                position: relative;
+            }
+            .top-content {
+                position: absolute;
+                top: 0;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                font-size: 12px;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                font-family: '微软雅黑';
+            }
+            .container {
+                width: 1200px;
+            }
+            .container-fluid {
+                width: 1200px;
+            }
+            .dev-left-list .dev-left-new-img {
+                margin-top: 2%;
+                width: 160px;
+                height: 100px;
+                background-color: #f1f1f1;
+                float: left;
+            }
+            .dev-left-new-imgs {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+        <div class="top">
+            <div class="container">
+
+                <nav class="nav1200">
+                    <ul style="float:right">
+                        <li class="activeColor" style="float:left;"><a href="index.html">首页</a></li>
+                        <li style="float:left"><a href="aboutus.html">关于我们</a></li>
+                        <li style="float:left"><a href="team.html">核心团队</a></li>
+                        <li style="float:left"><a id="factive" style="border-bottom: 2px solid #fff" href="dev-dynamic.html">发展动态</a></li>
+                        <li style="float:left"><a href="" style="color: #FFBC16">中</a><a href="en-index.html">/EN</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="top-content">
+                <p class="nav-title-ch">未来农业</p>
+                <p class="nav-title-en">FUTURE AGRICULTUPAL </p>
+                <div class="nav-dow" style="padding: 5px; border: 1px solid #fff"><a style="color: #fff" href="http://t5chain.pro/xzbweb/static/pdf/whitepaper.pdf" download="http://t5chain.pro/xzbweb/static/pdf/whitepaper.pdf">下载FAT白皮书</a></div>
+            </div>
+            <img src="img/index1.png" style="width:100%">
+
+        </div>
+        <div class="container-fluid" style="margin:2rem auto;">
+            <div class="dev-nav">
+                <div class="width1200">
+                    <div class="dev-nav-main">
+                        <a id="index" href="index.html">首页</a>
+                        <a id="newslist" href="dev-dynamic.html">&nbsp;  >&nbsp;      发展动态</a>
+                        <a id="newslist-details">&nbsp; >&nbsp;  内容详情</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid dev-main" style="margin:6rem auto;">
+            <div class="mini-layout-body">
+                <div class="dev-right">
+                    <div class="dev-right-topic">推荐内容</div>
+                    <div class="dev-right-list">
+                        <div class="dev-right-bg">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mini-layout-sidebar">
+                <div class="dev-left">
+                    <div class="dev-left-topic">发展动态</div>
+                    <div class="dev-left-list">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="buttom">
+            <div class="container " style="margin-top:6rem; ">
+                <div class="url">
+                    <div class="code"><img src="img/code.jpg" style="width: 90px;height: 90px;"></div>
+                    <ul id="bottom-url">
+                        <li><a href="https://weibo.com/FatChain" style="color: #fff;">微博：https://weibo.com/FatChain</a></li>
+                        <li><a href="http://twitter.lianpuie.com/?5072" style="color: #fff;">推特：http://twitter.lianpuie.com/?5072</a></li>
+                        <li><a href="FatChain@126.com" style="color: #fff;">邮箱：FatChain@126.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+
+    <script>
+        $(document).ready(function() {
+            getNews();
+        });
+        //获得年月日      得到日期oTime  
+        function getMyDate(str) {
+            var oDate = new Date(str),
+
+                oMonth = oDate.getMonth() + 1,
+                oDay = oDate.getDate(),
+
+                oTime = getzf(oMonth) + '-' + getzf(oDay); //最后拼接时间  
+            return oTime;
+        };
+        //补0操作  
+        function getzf(num) {
+            if (parseInt(num) < 10) {
+                num = '0' + num;
+            }
+            return num;
+        }
+
+
+
+        function getNews() {
+            var urls = "http://t5chain.pro/xzbweb/";
+            $.ajax({
+                type: "get", //方法类型
+                dataType: "json", //预期服务器返回的数据类型
+                url: urls + "/xzbWeb/getNewsList", //url
+                success: function(data) {
+
+                    var d = data.data;
+                    var list = d.list;
+                    $.each(list, function(index, item) {
+                        $(".dev-left-list").append("	<div class='dev-left-new' id='" + item.id + " ' onclick='getDetails(this.id)'>" +
+                            //"<div class='dev-left-bg'>" +
+                            "<div class='dev-left-new-img'><img class = 'dev-left-new-imgs' src=" + item.nauthor + "></div>" +
+                            "<div class='dev-left-new-content'>" +
+                            "<div class='dev-left-new-top'>" +
+                            "<div class='dev-left-new-title f18'>" +
+                            item.ntitle +
+                            "</div>" +
+                            "<div class='dev-left-new-date'>" + getMyDate(item.ndate) + "</div>" +
+                            "<div class='clear'></div>" +
+                            "</div>" +
+                            "<div class='dev-left-new-des f14'>" +
+                            item.ncontent +
+                            "</div>" +
+                            "</div>" +
+                            //"</div>" +
+                            "</div>")
+                        if (item.id == 1 || item.id == 2) {
+                            $(".dev-right-list .dev-right-bg").append("<div class='dev-right-new' id='" + item.id + " ' onclick='getDetails(this.id)''>" +
+                                "<div class='dev-right-img'><img class = 'dev-left-new-imgs' src=" + item.nauthor + "></div>" +
+                                "<div class='dev-right-new-title'>" + item.ntitle + "</div>" +
+                                "<div class='dev-right-new-content'>" + item.ncontent + "</div>" +
+                                "</div>")
+                        }
+                    });
+                },
+                error: function() {
+                    alert("系统链接出问题!");
+                }
+            });
+        }
+
+        function getDetails(id) {
+            var urls = "http://t5chain.pro/xzbweb/";
+            var preo = id - 1;
+            var next = id * 1 + 1;
+            $.ajax({
+                type: "get", //方法类型
+                dataType: "json", //预期服务器返回的数据类型
+                url: urls + "/xzbWeb/getNews/" + id, //url
+                success: function(data) {
+
+                    var d = data.data;
+                    var nauthor = d.nauthor;
+
+                    if (nauthor == null) {
+                        nauthor = "未知";
+                    }
+                    $("#newslist-details").show();
+                    $("#index").css('color', 'rgba(22,20,20,0.5)');
+                    $("#newslist").css('color', 'rgba(22,20,20,0.5)');
+                    $(".dev-main").html(
+                        "<div class='dev-details-title' style='font-size:30px;color:#1E9FFF;'>" + d.ntitle + "</div>" +
+                        "<div class='dev-details-da'>" +
+                        "<div class='dev-details-date'>时间&nbsp:&nbsp;" + getMyDate(d.ndate) + "</div>" +
+                        "<div class='dev-details-author'>作者&nbsp:&nbsp;" + nauthor + "</div>" +
+                        "<div class='clear'></div>" +
+                        "</div>" +
+                        "<div class='dev-details-content'>" + d.ncontent + "</div>" +
+                        "<div class='dev-details-bottom'>" +
+                        "<div class='dev-details-preo'>上一篇&nbsp:&nbsp; <a  id='" + preo + "' onclick='getDetails(this.id)'>" + getTitle(preo) + "</a></div>" +
+                        "<div class='dev-details-next'>下一篇&nbsp:&nbsp<a  id='" + next + "' onclick='getDetails(this.id)'>" + getTitle(next) + "</a></div>" +
+                        "<div class='clear'></div>"
+
+                    )
+
+                },
+                error: function() {
+                    alert("系统链接出问题!");
+                }
+            });
+        }
+
+        function getTitle(id) {
+
+            var title;
+            var urls = "http://t5chain.pro/xzbweb/";
+            if (id == 0) {
+                title = "已经是第一篇";
+                return title;
+            } else {
+                $.ajax({
+                    type: "get", //方法类型
+                    dataType: "json", //预期服务器返回的数据类型
+                    async: false,
+                    url: urls + "/xzbWeb/getNews/" + id, //url
+                    success: function(data) {
+                        var d = data.data;
+                        if (d == null) {
+                            title = "已经是最后一页";
+                        } else {
+                            title = d.ntitle;
+                        }
+
+
+                    },
+
+                    error: function() {
+                        alert("系统链接出问题!");
+                    }
+                });
+                return title;
+            }
+
+        }
+        var id = GetQueryString('id');
+
+        function GetQueryString(id) {
+            var reg = new RegExp("(^|&)" + id + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null)
+                getDetails(r[2]);
+
+        }
+    </script>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<!-- 状态栏的值可能为black, default, black-translucent -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<!-- uc强制竖屏 -->
+	<meta name="screen-orientation" content="portrait">
+	<!-- UC强制全屏 -->
+	<meta name="full-screen" content="yes">
+	<!-- UC应用模式 -->
+	<meta name="browsermode" content="application">
+	<!-- QQ强制竖屏 -->
+	<meta name="x5-orientation" content="portrait">
+	<!-- QQ强制全屏 -->
+	<meta name="x5-fullscreen" content="true">
+	<!-- QQ应用模式 -->
+	<meta name="x5-page-mode" content="app">
+	<!-- 是针对一些老的不识别viewport的浏览器，列如黑莓 -->
+	<meta name="HandheldFriendly" content="true">
+	<!-- 微软的老式浏览器 -->
+	<meta name="MobileOptimized" content="320">
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta name="format-detection" content="telephone=no, email=no" />
+	<title>TokenPie App下载</title>
+	<style>
+		html ,body{
+		margin: 0px;
+		padding: 0px;
+		min-height: 626px;
+  }
+a {
+	text-decoration: none;
+}
+
+#loading {
+	/*text-align: center;
+	position: absolute;
+	top:65%;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	line-height: 1.12px;*/
+	
+	padding-top: 110%;
+	text-align:center
+}
+
+/*#loading a {
+	color: #ffffff;
+	border: 1.3px solid #ffffff;
+	width: 5.267rem;
+	height: 1.12rem;
+	border-radius: 1.33rem;
+	font-size: 0.45rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}*/
+#loading a {	
+/*display: flex;	*/
+
+
+}
+</style>
+</head>
+<script type="text/javascript" src="js/flexible.js"></script>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+
+
+<body>
+	<div id="box">
+		<img src="images/kszca_02.jpg" width="100%" style="z-index: -1;position: absolute;" />
+		<div id="loading">
+			<a id="load_android" href="javascript:">
+				<img src="images/android.png" alt="android版下载" />
+			</a>
+			<a href="https://hu-1257313909.cos.ap-hongkong.myqcloud.com/t5c_manifest.plist">
+				<img style="margin-top: 10px;" src="images/apple.png" alt="iPhone版下载" /></a>
+			<a href="help.html"> <img style="margin-top: 10px;" src="images/bz.png" alt="help" /></a>
+		</div>
+	</div>
+
+
+
+	<script src="js/jquery.min.js"></script>
+	<script>
+		$('#load_android').on('click', function () {
+			checkPlatform();
+		});
+		////手机端判断各个平台浏览器及操作系统平台
+		function checkPlatform() {
+			if (/MicroMessenger/i.test(navigator.userAgent)) {
+				alert("请点击微信右上角按钮，然后在弹出的菜单中，点击在浏览器中打开，即可下载");
+			} else if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+				alert("苹果设备不能下载安卓安装包！");
+			} else {
+
+				$("#load_android").attr('href', 'https://hu-1257313909.cos.ap-hongkong.myqcloud.com/t5c.apk');
+			}
+		};
+	</script>
+</body>
+
+</html>
